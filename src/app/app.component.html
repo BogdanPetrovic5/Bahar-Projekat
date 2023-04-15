@@ -1,0 +1,188 @@
+
+<div class="header_navbar">
+    <div class="header">
+        <div class="header_logo">
+            <div class="logo_img">
+                  
+            </div>
+           
+        </div>
+        <div class="header_tabs">
+            <div class="header_info">
+                <div class="header_info_mail_phone">
+                    <i class="bi bi-envelope"> probamail@gmail.com</i>
+                    <i class="bi bi-telephone"> 00000000000</i>
+                    <i class="bi bi-geo-alt" (click)="changeURL()">Serbia, Kragujevac</i>
+                </div>
+            </div>
+            <div class="header_menu">
+                <div class="header_menu_tabs">
+                    <ul class="header_menu_list">
+                        <li class="tab">
+                            <span><a routerLink="/Početna strana">Početna strana </a><i class="bi bi-house"></i></span>
+                        </li>
+                        <li id="products" class="tab">
+                            <span><a routerLink="/Proizvodi">Proizvodi </a> <i class="bi bi-caret-down-fill"></i></span>
+                            
+                            <div class="products_drop_down">
+                                <li routerLink="/Kondenzacione jedinice"><span>Kondenzacione jedinice</span></li>
+                                <li routerLink="/Isparivači" class="top_border"><span>Isparivači</span></li>
+                                <li routerLink="/Hladionička vrata" class="top_border"><span>Vrata</span></li>
+                                <li routerLink="/Paneli" class="top_border"><span>Paneli</span></li>
+                            </div>
+                        </li>
+                        <li class="tab">
+                            <span routerLink="/Kontakt">Kontakt<i class="bi bi-envelope"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="phone_header">
+            <div class="phone_header_drop_down">
+                <span><i class="bi bi-list"></i></span>
+                <input type="checkbox" name="phone_menu_drop_down" id="button_for_drop_down" (click)="overlay()">
+                <div class="phone_menu_drop_down" *ngIf="hide == true">
+                    <div class="phone_menu_drop_down_content">
+                        <div class="close_phone_drop_down">
+                            <span><i class="bi bi-x-lg"></i></span>
+                        </div>
+                        <div class="phone_menu_drop_down_list">
+                            <li>
+                                <span>Početna strana</span>
+                            </li>
+                            <li>
+                                <span><a routerLink="/Proizvodi" (click)="changeRoute()">Proizvodi</a></span>
+                            </li>
+                            <li>
+                                <span routerLink="/Kontakt" >Kontakt</span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet>
+</router-outlet>
+<div class="footer">
+    <div class="footer_content">
+        <div class="site_content footer_content_section">
+            <div class="condensing_unit_list products_list" data-aos="fade-right"  data-aos-duration="1400">
+                <header>Kondenzacione jedinice</header>
+                <ul>
+                    <li>
+                        Proizvod A
+                    </li>
+                    <li>
+                        Proizvod B
+                    </li>
+                    <li>
+                        Proizvod C
+                    </li>
+                    <li>
+                        Proizvod D
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="evaporators_list products_list" data-aos="fade-right"  data-aos-duration="1900">
+                <header>Evaporatori</header>
+                <ul>
+                    <li>
+                        Proizvod A
+                    </li>
+                    <li>
+                        Proizvod B
+                    </li>
+                    <li>
+                        Proizvod C
+                    </li>
+                    <li>
+                        Proizvod D
+                    </li>
+                </ul>
+            </div>
+            <div class="panels_list products_list" data-aos="fade-right"  data-aos-duration="2300">
+                <header>Paneli</header>
+                <ul>
+                    <li>
+                        Proizvod A
+                    </li>
+                    <li>
+                        Proizvod B
+                    </li>
+                    <li>
+                        Proizvod C
+                    </li>
+                    <li>
+                        Proizvod D
+                    </li>
+                </ul>
+            </div>
+            <div class="doors_list products_list" data-aos="fade-right"  data-aos-duration="2800">
+                <header>Vrata</header>
+                <ul>
+                    <li>
+                        Proizvod A
+                    </li>
+                    <li>
+                        Proizvod B
+                    </li>
+                    <li>
+                        Proizvod C
+                    </li>
+                    <li>
+                        Proizvod D
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="site_logo footer_content_section">
+            <div class="site_logo_content_time">
+                <img src="/assets/images/Logo101.png" alt="">
+                <div class="work_time">
+                    <p>
+                        Radno vreme: 08:00h - 15:00h
+                    </p>
+                </div>
+            </div>
+           
+        </div>
+        <div class="forms_of_contact footer_content_section">
+            <div class="forms_of_contact_content">
+                <h1>
+                    <i class="bi bi-headset"></i> Kontakt
+                </h1>
+                <p>
+                    <i class="bi bi-envelope"> probamail@gmail.com</i>
+                    <i class="bi bi-telephone"> 00000000000</i>
+                    <i class="bi bi-geo-alt" (click)="changeURL()">Serbia, Kragujevac</i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="owners_and_credits">
+        <div class="owners_and_credits_content">
+            <div class="owners">
+                <div class="owners_text text">
+                    <p>Vlasnik: Vesna Petrović</p>
+                </div>
+            </div>
+            <div class="credits">
+                <div class="credits_text text">
+                    <p>
+                        Dizajn: Bogdan Petrović <br>
+                        <a href="https://www.flaticon.com/authors/smashicons">Credits(Ikonice preuzete): Icons</a>
+                    </p>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,1372 @@
+$bg_color:rgb(238, 238, 238);
+$hover_color:rgb(189, 189, 189);
+$border_color:rgb(206, 206, 206);
+$text_color:rgb(95, 179, 0);
+$text:rgb(95, 179, 0);
+$linear_1: linear-gradient(270deg, rgba(210,210,210,1) 0%, rgba(164,164,164,1) 100%, rgba(225,250,255,1) 100%);
+$linear_2:rgb(210,210,210);
+$linear_1_1:rgb(123,238,140);
+$linear_1_2:linear-gradient(90deg, rgb(195, 252, 203) 0%, rgba(225,246,198,1) 100%, rgba(154,154,154,1) 100%);;
+$box_shadow: 1px 0px 5px 0px rgb(192, 192, 192);
+$widht_drop_down: 160px;
+$phone_drop_down: rgb(95, 95, 95);
+$box_shadow_verctical:  1px -1px 5px 0px rgb(192, 192, 192);
+$font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font_1: Verdana, Geneva, Tahoma, sans-serif;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+a{
+    text-decoration: none !important;
+    text-transform: none !important;
+    color: $text_color;
+}
+
+a:hover{
+    color: black;
+}
+///
+.bi-geo-alt:hover{
+    cursor: pointer !important;
+}
+/// 
+.header_navbar{
+    
+    box-shadow: $box_shadow;
+    width: 100%;
+    height: 80px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $bg_color;
+  
+}
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.header_menu, .header_info{
+    display: none;
+}
+.phone_header, .header_logo{
+    width: 50%;
+}
+.phone_header{
+    display: flex;
+    justify-content: right;
+}
+.phone_header_drop_down{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding-right: 5px;
+    display: table;
+    position: relative;
+}
+//Dugme za prikaz menija
+.phone_header_drop_down span{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 40px;
+    color: $text_color;
+    font-weight: 600;
+    
+}
+#button_for_drop_down{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 999999;
+}
+//Drop down meni
+.phone_menu_drop_down{
+    width: 50%;
+    position: fixed;
+    background-attachment: scroll;
+    z-index: 9999;
+    right: 0;
+    background: rgb(95,95,95);
+    background: linear-gradient(166deg, rgba(95,95,95,1) 0%, rgba(136,136,136,1) 100%);
+    height: 100%;
+    
+    overflow-y: auto;
+    overflow-x:hidden;
+    
+    animation: rotateY 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+//Animacija za prikaz dropDown menija
+@keyframes rotateY {
+    0% {
+       transform: rotateY(90deg)
+   }
+   80% {
+       transform: rotateY(-10deg)
+   }
+   100% {
+       transform: rotateY(0)
+   }
+}
+.close_phone_drop_down{
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    position: relative;
+}
+.close_phone_drop_down span{
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.phone_menu_drop_down_list{
+    list-style: none;
+    height: calc(100% - 80px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+}
+.phone_menu_drop_down_list li{
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 100%;
+   
+   
+}
+.phone_menu_drop_down_list li span{
+    font-size: 20px;
+    width: 100%;
+   
+}
+.overlay{
+    
+    background-color: #c50000;
+    opacity: 1;
+    height: 100vh;
+    width: 100vh;
+}
+//Prikaz drop downa
+// input[type="checkbox"]:checked + .phone_menu_drop_down{
+//     display: block;
+    
+// }
+// input[type="checkbox"]:checked + .overlay{
+//     display: block;
+// }
+.phone_menu_drop_down_list li span:hover{
+    cursor: pointer;
+    color: white;
+}
+.bi-telephone, .bi-geo-alt, .bi-envelope{
+    margin-left: 10px;
+    padding-right: 5px;
+    
+}
+.bi-telephone, .bi-envelope{
+    border-right: 1px solid $border_color;
+}
+.tab .bi-envelope{
+    border: none !important;
+}
+i text{
+    padding-left:5px ;
+}
+//Generalno
+.products_drop_down{
+    display: none;
+}
+.bi-caret-down-fill{
+    font-size: 15px;
+}
+///slide
+    
+///slide
+/// 
+@media only screen and (max-width:389px){
+    .header_logo{
+        display: none;
+    }
+    .phone_header{
+        width: 100%;
+    }
+    .phone_header{
+        display: flex;
+        justify-content: right;
+    }
+    .phone_header_drop_down{
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        padding-right: 5px;
+        display: table;
+        position: relative;
+        
+    }
+    //Dugme za prikaz menija
+    .phone_header_drop_down span{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 40px;
+        color: $text_color;
+        font-weight: 600;
+        
+    }
+    #button_for_drop_down{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 999999;
+    }
+    //Drop down meni
+    .phone_menu_drop_down{
+        width: 100%;
+        position: fixed;
+        background-attachment: scroll;
+        z-index: 9999;
+        right: 0;
+        
+        background: rgb(95,95,95);
+        background: linear-gradient(166deg, rgba(95,95,95,1) 0%, rgba(136,136,136,1) 100%);
+        height: 100%;
+        overflow-y: auto;
+        overflow-x:hidden;
+        display: flex;
+        justify-content: right;
+        animation: rotateY 300ms ease-in-out forwards;
+        transform-origin: top center;
+    }
+  
+    //Animacija za prikaz dropDown menija
+    @keyframes rotateY {
+        0% {
+           transform: rotateY(90deg)
+       }
+       80% {
+           transform: rotateY(-10deg)
+       }
+       100% {
+           transform: rotateY(0)
+       }
+    }
+    .close_phone_drop_down span{
+        font-size: 15px;
+        text-transform: capitalize;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    .footer{
+        width: 100%;
+        
+        box-shadow: $box_shadow;
+        overflow: hidden;
+    }
+    .footer_content{
+        width: 100%;
+        
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .site_content{
+        display: none;
+    }
+    .site_logo{
+        width: 100%;
+        margin-top: 80px;
+    }
+    .forms_of_contact{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 80px;
+    }
+    .site_logo_content_time{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .site_logo_content_time img{
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .site_logo_content_time p{
+        font-size: 13px;
+        margin-top: 10px;
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0 auto;
+    }
+    .work_time p{
+        margin: 0 auto !important;
+        width: 70%;
+    }
+    ///
+    //Vidovi kontatka
+    .forms_of_contact_content h1{
+        font-size: 20px;
+    }
+    .forms_of_contact_content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .forms_of_contact_content p{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    .forms_of_contact_content p i{
+        border: none !important;
+        font-size: 13px;
+    }
+    //
+    .owners_and_credits{
+        width: 100%;
+        border-top: 0.5px solid $border_color;
+       
+    }
+    .owners_and_credits_content{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+    .owners, .credits{
+        width: 100%;
+        height: 50%;
+    }
+ 
+    .text{
+        
+        width: 100%;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .owners{
+        font-weight: 500;
+    }
+}
+@media only screen and(min-width:390px) and (max-width:767px){
+    .logo_img{
+        width: 80%;
+        height: 80px;
+        margin: 0 auto;
+        background-image: url(/assets/images/Logo101.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+        
+    }
+    .phone_header{
+        width: 100%;
+    }
+    .phone_header{
+        width: 50%;
+        display: flex;
+        justify-content: right;
+    }
+    .phone_header_drop_down{
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        padding-right: 5px;
+        display: table;
+        position: relative;
+        
+    }
+    //Dugme za prikaz menija
+    .phone_header_drop_down span{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 40px;
+        color: $text_color;
+        font-weight: 600;
+        
+    }
+    #button_for_drop_down{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 999999;
+    }
+    //Drop down meni
+    .phone_menu_drop_down{
+        width: 100%;
+        position: fixed;
+        background-attachment: scroll;
+        z-index: 9999;
+        right: 0;
+        
+        background: rgb(95,95,95);
+        background: linear-gradient(166deg, rgba(95,95,95,1) 0%, rgba(136,136,136,1) 100%);
+        height: 100%;
+        overflow-y: auto;
+        overflow-x:hidden;
+        display: flex;
+        justify-content: left;
+        animation: rotateY 300ms ease-in-out forwards;
+        transform-origin: top center;
+    }
+    //Animacija za prikaz dropDown menija
+    @keyframes rotateY {
+        0% {
+           transform: rotateY(90deg)
+       }
+       80% {
+           transform: rotateY(-10deg)
+       }
+       100% {
+           transform: rotateY(0)
+       }
+    }
+    .close_phone_drop_down span{
+        font-size: 15px;
+        text-transform: capitalize;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    .footer{
+        width: 100%;
+        
+        box-shadow: $box_shadow;
+        overflow: hidden;
+    }
+    .footer_content{
+        width: 100%;
+        
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .site_content{
+        display: none;
+    }
+    .site_logo{
+        width: 100%;
+        margin-top: 80px;
+    }
+    .forms_of_contact{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 80px;
+    }
+    .site_logo_content_time{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .site_logo_content_time img{
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .site_logo_content_time p{
+        font-size: 13px;
+        margin-top: 10px;
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0 auto;
+    }
+    .work_time p{
+        margin: 0 auto !important;
+        width: 60%;
+    }
+    ///
+    //Vidovi kontatka
+    .forms_of_contact_content h1{
+        font-size: 20px;
+    }
+    .forms_of_contact_content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .forms_of_contact_content p{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    .forms_of_contact_content p i{
+        border: none !important;
+        font-size: 13px;
+    }
+    //
+    .owners_and_credits{
+        width: 100%;
+        border-top: 0.5px solid $border_color;
+       
+    }
+    .owners_and_credits_content{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+    .owners, .credits{
+        width: 100%;
+        height: 50%;
+    }
+    .text{
+        
+        width: 100%;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        text-align: center;
+    }
+    .owners{
+        font-weight: 500;
+    }
+}
+//Izmedju 768px i 1023px
+@media only screen and(min-width:768px) and (max-width:1023px){
+    .header_navbar{
+        
+        box-shadow: $box_shadow;
+        width: 100%;
+        height: 80px;
+    }
+    .header{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 9999999999;
+       
+    }
+    .logo_img{
+        width: 50%;
+        height: 80px;
+        margin: 0 auto;
+        background-image: url(/assets/images/Logo101.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+        
+    }
+    .header_menu, .header_info{
+        display: none;
+    }
+    .phone_header, .header_logo{
+        width: 50%;
+    }
+    .phone_header{
+        display: flex;
+        justify-content: right;
+    }
+    .phone_header_drop_down{
+        width: 50%;
+        height: 100%;
+        text-align: right;
+        padding-right: 5px;
+        display: table;
+        position: relative;
+    }
+    //Dugme za prikaz menija
+    .phone_header_drop_down span{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 40px;
+        color: $text_color;
+        font-weight: 600;
+        
+    }
+    #button_for_drop_down{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 999999;
+    }
+    
+    .phone_menu_drop_down{
+        width: 100%;
+        position: fixed;
+        background-attachment: scroll;
+        z-index: 99999;
+        right: 0;
+        background: rgb(149,149,149);
+        background: linear-gradient(107deg, rgba(149,149,149,0.500437675070028) 0%, rgba(101,101,101,0.500437675070028) 50%);
+        
+        height: 100%;
+        
+        overflow-y: auto;
+        overflow-x:hidden;
+        
+        display: flex;
+        justify-content: right;
+        animation: rotateY 300ms ease-in-out forwards;
+        transform-origin: top center;
+    }
+    .phone_menu_drop_down_content{
+        width: 250px;
+        height: 100%;
+        background: rgb(95,95,95) !important;
+        background: linear-gradient(166deg, rgba(95,95,95,1) 0%, rgba(136,136,136,1) 100%) !important;
+    }
+    //Animacija za prikaz dropDown menija
+    @keyframes rotateY {
+        0% {
+           transform: rotateY(90deg)
+       }
+       80% {
+           transform: rotateY(-10deg)
+       }
+       100% {
+           transform: rotateY(0)
+       }
+    }
+    //Drop down meni na telefonu
+    .close_phone_drop_down{
+        height: 80px;
+        display: flex;
+        justify-content: left;
+        position: relative;
+    }
+    .close_phone_drop_down span{
+        font-size: 15px;
+        text-transform: capitalize;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    .phone_menu_drop_down_list{
+        list-style: none;
+        height: calc(100% - 80px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        
+    }
+    .phone_menu_drop_down_list li{
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 100%;
+       
+       
+    }
+    .phone_menu_drop_down_list li span{
+        font-size: 20px;
+        width: 100%;
+       
+    }
+    //
+    //Prikaz drop downa
+    // input[type="checkbox"]:checked + .phone_menu_drop_down{
+    //     display: flex;
+    //     justify-content: right;
+    // }
+    
+  
+    .phone_menu_drop_down_list li span:hover{
+        cursor: pointer;
+        color: white;
+    }
+    .footer{
+        width: 100%;
+        
+        box-shadow: $box_shadow;
+        overflow: hidden;
+    }
+    .footer_content{
+        width: 90%;
+        
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .site_content{
+        display: none;
+    }
+    .site_logo{
+        width: 100%;
+        margin-top: 80px;
+    }
+    .forms_of_contact{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 80px;
+    }
+    .site_logo_content_time{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 0 auto;
+    }
+    .site_logo_content_time img{
+        width: 100%;
+        height: 50px;
+    }
+    .work_time p{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .site_logo_content_time p{
+        font-size: 13px;
+        margin-top: 10px;
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    ///
+    //Vidovi kontatka
+    .forms_of_contact_content h1{
+        font-size: 20px;
+    }
+    .forms_of_contact_content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .forms_of_contact_content p{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    .forms_of_contact_content p i{
+        border: none !important;
+        font-size: 13px;
+    }
+    //
+    .owners_and_credits{
+        width: 100%;
+        border-top: 0.5px solid $border_color;
+       
+    }
+    .owners_and_credits_content{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+    .owners, .credits{
+        width: 100%;
+        height: 50%;
+    }
+    .text{
+        
+        width: 100%;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        text-align: center;
+    }
+    .owners{
+        font-weight: 500;
+    }
+    //overlay
+    .no{
+       opacity: 0;
+    }
+    .yes{
+        background-color: #c50000;
+        opacity: 1;
+        
+        width: calc(100% - 250px);
+        height: 100vh;
+        
+    }
+ 
+}
+
+@media  only screen and(min-width:1024px) and (max-width:1279px) {
+    //Heder navbar
+    .header_navbar{
+        
+        box-shadow: $box_shadow;
+        width: 100%;
+        height: 80px;
+    }
+    .header{
+        width: 90%;
+        height: 100%;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+    //Za logo
+    .header_logo{
+        width: 20%;
+        display: table;
+    }
+    .logo_img{
+        width: 100%;
+        height: 80px;
+        background-image: url(/assets/images/Logo101.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+    //Tabovi, informacije itd
+    .header_tabs{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .header_info{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        display: table;
+        font-size: small;
+        
+    }
+    .header_info_mail_phone{
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+        font-size: 15px;
+    }
+    .bi-telephone, .bi-geo-alt, .bi-envelope{
+        margin-left: 10px;
+        padding-right: 5px;
+        
+    }
+    .bi-telephone, .bi-envelope{
+        border-right: 1px solid $border_color;
+    }
+    //Heder meni
+    .header_menu li{
+        height: 100%;
+        width: calc(100% / 3);
+        color: $text_color;
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        display: table-cell;
+        vertical-align:bottom;
+        padding-bottom: 5px;
+        
+    }
+    .header_menu li:hover{
+        color: black;
+        transition: 300ms;
+        cursor: pointer;
+    }
+    .header_menu{
+        width: 85%;
+        max-height: 50%;
+        list-style: none;
+        position: relative;
+        align-self: flex-end;
+        display: flex;
+        border-top: 0.5px solid $border_color;
+    }
+    //Heder tabovi
+    .header_menu_tabs{
+        display: flex;
+        justify-content: right;
+        width: 100%;
+    }
+    ul.header_menu_list{
+        height: 100%;
+        display: flex;
+        justify-content: right;
+    }
+    ul.header_menu_list li.tab{
+        margin-left: 25px;
+        width: auto;
+        position: relative;
+        display: table;
+        
+    }
+    
+    ul.header_menu_list li span{
+        display: table-cell;
+        vertical-align: middle;
+        
+    }
+    //Produkti drop down
+    .products_drop_down{
+        display: none;
+        height: 200px;
+        width: $widht_drop_down;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        animation: growDown 300ms ease-in-out forwards;
+        transform-origin: top center;
+        z-index: 9999999;
+    }
+    //Animacija
+    @keyframes growDown {
+        0% {
+            transform: scaleY(0)
+        }
+        80% {
+            transform: scaleY(1.1)
+        }
+        100% {
+            transform: scaleY(1)
+        }
+    }
+    .products_drop_down li{
+       width: 100%;
+       display: table;
+       text-align: left;
+       padding-left: 5px;
+    }
+    .products_drop_down li span{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 15px
+    }
+    .top_border{
+        border-top: 0.5px solid $border_color;
+    }
+    #products:hover .products_drop_down{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        background-color: white;
+        box-shadow: $box_shadow_verctical;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .phone_header{
+        display: none;
+    }
+    //
+    .footer{
+        width: 100%;
+        height: 400px;
+        box-shadow: $box_shadow;
+        overflow: hidden;
+    }
+    .footer_content{
+        width: 90%;
+        height: 80% !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+    //Svi proizvod futer
+    .site_content{
+        display: flex;
+        justify-content: row;
+        margin-top: 80px;
+        width: 60%;
+    }
+    .site_logo{
+        width: 20%;
+        margin-top: 80px;
+    }
+    .forms_of_contact{
+        width: 20%;
+        margin-top: 80px;
+    }
+    .products_list{
+        width: calc(100% / 4);
+    }
+    //Proizvodi lista
+    .products_list header{
+        font-size: 14px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: left;
+        padding-left: 10px;
+        font-weight: 600;
+    }
+    .products_list ul li{
+        margin-top: 10px;
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        list-style:square;
+        
+    }
+    //Site logo
+    .site_logo_content_time{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .site_logo_content_time img{
+        width: 100%;
+        height: 50px;
+    }
+    .site_logo_content_time p{
+        font-size: 13px;
+        margin-top: 10px;
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    ///
+    //Vidovi kontatka
+    .forms_of_contact_content h1{
+        font-size: 20px;
+    }
+    .forms_of_contact_content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .forms_of_contact_content p{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    .forms_of_contact_content p i{
+        border: none !important;
+        font-size: 13px;
+    }
+    //
+    .owners_and_credits{
+        width: 100%;
+        height: 20%;
+        border-top: 0.5px solid $border_color;
+       
+    }
+    .owners_and_credits_content{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .owners, .credits{
+        width: 50%;
+        height: 100%;
+        display: table;
+    }
+    .text{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+       
+    }
+    .owners{
+        text-align: left;
+        font-weight: 500;
+    }
+    .credits{
+        text-align: right;
+    }
+}
+@media only screen and(min-width:1280px){
+    .header_navbar{
+        
+        
+        width: 100%;
+        height: 80px;
+        position: relative;
+        z-index: 2;
+    }
+    .header_navbar::before{
+        width: 100%;
+        height: 100%;
+        content: "";
+        box-shadow: $box_shadow;
+        position: absolute;
+        z-index: 0;
+    }
+    .header{
+        width: 75%;
+        height: 100%;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+    .header_logo{
+        width: 20%;
+        display: table;
+    }
+    .logo_img{
+        width: 100%;
+        height: 80px;
+        background-image: url(/assets/images/Logo101.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+        
+    }
+   
+    .header_tabs{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+    .header_info{
+        height: 50%;
+        width: 100%;
+        
+        display: flex;
+        display: table;
+        z-index: 2;
+    }
+    .header_info_mail_phone{
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+        font-size: 17px;
+        z-index: 2;
+    }
+    .bi-telephone, .bi-geo-alt, .bi-envelope{
+        margin-left: 10px;
+        padding-right: 5px;
+        
+    }
+    .bi-telephone, .bi-envelope{
+        border-right: 1px solid $border_color;
+    }
+    .header_menu{
+        width: 80%;
+        max-height: 50%;
+        list-style: none;
+        position: relative;
+        align-self: flex-end;
+        display: flex;
+        border-top: 0.5px solid $border_color;
+    }
+    .header_menu_tabs{
+        display: flex;
+        justify-content: right;
+        width: 100%;
+    }
+    .header_menu li{
+        height: 100%;
+        width: calc(100% / 3);
+        color: $text_color;
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        display: table-cell;
+        vertical-align:bottom;
+        padding-bottom: 5px;
+        
+    }
+    .header_menu li:hover{
+        color: black;
+        transition: 300ms;
+        cursor: pointer;
+    }
+    ul.header_menu_list{
+        height: 100%;
+        display: flex;
+        justify-content: right;
+    }
+    ul.header_menu_list li.tab{
+        margin-left: 25px;
+        width: auto;
+        position: relative;
+        display: table;
+        
+    }
+    
+    ul.header_menu_list li span{
+        display: table-cell;
+        vertical-align: middle;
+        
+    }
+    .products_drop_down{
+        display: none;
+        height: 200px;
+        width: $widht_drop_down;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        z-index: 9999999;
+        animation: rotateY 300ms ease-in-out forwards;
+        transform-origin: top center;
+    }
+    @keyframes rotateY {
+        0% {
+           transform: rotateY(90deg)
+       }
+       80% {
+           transform: rotateY(-10deg)
+       }
+       100% {
+           transform: rotateY(0)
+       }
+    }
+    .products_drop_down li{
+       width: 100%;
+       display: table;
+       text-align: left;
+       padding-left: 5px;
+    }
+    .products_drop_down li span{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 15px
+    }
+    .top_border{
+        border-top: 0.5px solid $border_color;
+    }
+    #products:hover .products_drop_down{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        background-color: white;
+        box-shadow: $box_shadow_verctical;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .phone_header{
+        display: none;
+    }
+    .footer{
+        width: 100%;
+        height: 400px;
+        box-shadow: $box_shadow;
+        overflow: hidden;
+    }
+    .footer_content{
+        width: 80%;
+        height: 80% !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+    //Svi proizvod futer
+    .site_content{
+        display: flex;
+        justify-content: row;
+        margin-top: 80px;
+        width: 60%;
+    }
+    .site_logo{
+        width: 20%;
+        margin-top: 80px;
+    }
+    .forms_of_contact{
+        width: 20%;
+        margin-top: 80px;
+    }
+    .products_list{
+        width: calc(100% / 4);
+    }
+    //Proizvodi lista
+    .products_list header{
+        font-size: 14px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: left;
+        padding-left: 10px;
+        font-weight: 600;
+    }
+    .products_list ul li{
+        margin-top: 10px;
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        list-style:square;
+        
+    }
+    //Site logo
+    .site_logo_content_time{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .site_logo_content_time img{
+        width: 90%;
+        height: 50px;
+    }
+    .site_logo_content_time p{
+        font-size: 13px;
+        margin-top: 10px;
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    ///
+    //Vidovi kontatka
+    .forms_of_contact_content h1{
+        font-size: 20px;
+    }
+    .forms_of_contact_content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .forms_of_contact_content p{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+    }
+    .forms_of_contact_content p i{
+        border: none !important;
+        font-size: 15px;
+    }
+    //
+    .owners_and_credits{
+        width: 100%;
+        height: 20%;
+        border-top: 0.5px solid $border_color;
+       
+    }
+    .owners_and_credits_content{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .owners, .credits{
+        width: 50%;
+        height: 100%;
+        display: table;
+    }
+    .text{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+       
+    }
+    .owners{
+        text-align: left;
+        font-weight: 500;
+    }
+    .credits{
+        text-align: right;
+    }
+    
+}

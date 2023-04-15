@@ -1,0 +1,208 @@
+
+<div class="main_page_content">
+    <div class="row overview">
+        <!-- <div class="col-md-7 overview_title">
+            <img src="/assets/images/Overlay1.png" alt="" class="logo">
+            <div class="general_info_1_h1">
+                <img src="/assets/images/Baharbelo1.png" alt="">
+                <p>
+                    
+                </p>
+            </div>
+            <div class="general_info_2">
+                <div class="general_info_2_h1">
+                    <h1>
+                        Naslov
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, <br> adipisicing elit. 
+                    </p>
+                    <button type="button" class="btn btn-outline-warning">Više informacija</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 overview_service">
+    
+        </div> -->
+        <!-- <div class="col-md-3"></div> -->
+        <div class="overview_info">
+            <div class="overview_info_content">
+                <div class="overview_info_content_title" >
+                    <div>
+                        
+                        <div>
+                            <img src="/assets/images/Baharbelo1.png" alt="">
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <hr class="overview_info_content_hr">
+                <div class="overview_info_content_info">
+                    <div class="overview_info_content_info_title" data-aos="fade-down"
+                        data-aos-duration="2000">
+                            <p> <span>lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Enim nostrum laudantium,  officiis corporis ad fugit voluptatum veniam iure earum, voluptas qui blanditiis ullam nihil omnis necessitatibus. Molestias possimus velit sit.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-3"></div> -->
+    </div>
+    <div class="row main_page">
+    
+        <div class="col-sm-12 col-md-3">
+            <div class="products_title" data-aos="fade-up"
+            data-aos-duration="2000">
+                <h1>
+                    Proizvodi
+                </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, <br> elit. Perferendis nulla, voluptatem porro molestias dolores atque sequi!</p>
+                <button type="button" class="btn btn-outline-success">Više informacija</button>
+            </div>
+            
+        </div>
+        <div class="col-sm-12 col-md-9">
+                <div class="row" data-aos="fade-right"  data-aos-duration="2000">
+                    <div class="col-md-12 products_1" >
+                        <div class="condensing_unit" >
+                            <img src="/assets/images/CUIcon2.png" alt="">
+                            <h1>
+                                Kondenzacione jedinice
+                            </h1>
+                        </div>
+                        <div class="evaporators" >
+                            <img src="/assets/images/EVIcon2.png" alt="">
+                            <h1>
+                                Isparivači
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12 products_2">
+                        <div class="panels" >
+                            <img src="/assets/images/PIcon1.png" alt="">
+                            <h1>
+                                Paneli
+                            </h1>
+                        </div>
+                        <div class="frigo_doors" >
+                            <img src="/assets/images/DIcon1.png" alt="">
+                            <h1>
+                                Vrata
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+<div class="slide_show">
+    <div class="slide_show_content">
+        <div>
+            <div class="slide_show_content_left">
+                <div class="slide_show_content_left_arrow " (click)="left()">
+                    <i class="bi bi-chevron-left left arrows" ></i>
+                </div>
+            </div>
+            <div class="slide_show_content_right">
+                <div class="slide_show_content_right_arrow " (click)="right()">
+                    <i class="bi bi-chevron-right right arrows" ></i>
+                </div>
+            </div>
+            <div class="slide_show_content_title">
+                <div class="slide_show_content_title_content" *ngFor="let img of image_array">
+                   <div>
+                        <h1 [hidden]="img.show == false">{{img.title}}</h1>
+                        <p [hidden]="img.show == false">{{img.p}}</p>
+                        <button type="button" class="btn btn-outline-success" routerLink="/{{img.link}}" [hidden]="img.show == false">Više informacija</button>
+                       
+                        
+                   </div>
+                </div>
+            </div>
+            <div class="slide_show_content_img" *ngFor="let img of image_array" >
+                <img [src]="img.src" alt="" [hidden]="img.show == false"/>
+            </div>  
+            <div class="slider_container">
+                <div class="slider_container_content">
+                    <div class="slide" *ngFor="let slide of image_array" >
+                        <div [ngClass]="slide.show ? 'fill' : 'noFill'" class="slide_conent" >
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row slide_show_content">
+        <div class="col-12 col-sm-12 col-md-6 service_1">
+            <div class="images_1">
+                <div class="images_1_img" *ngFor="let img of image_array_1">
+                    <img [src]="img.src" [hidden]="img.show == true"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 service_1_description">
+            <div class="description_1">
+                <div class="description_1_title_p" *ngFor="let img of image_array_1" >
+                    <div>
+                        <h1 [hidden]="img.show == true">
+                            {{img.title}}
+                        </h1>
+                        <p [hidden]="img.show == true">
+                            {{img.p}}
+                        </p>
+                        <button type="button" class="btn btn-outline-success" [hidden]="img.show == true" routerLink="">Više informacija</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 service_2_description">
+            <div class="description_2">
+                <div class="description_2_title_p" *ngFor="let img of image_array_2">
+                    <div>
+                        <h1 [hidden]="img.show == true">
+                            {{img.title}}
+                        </h1>
+                        <p [hidden]="img.show == true">
+                            {{img.p}}
+                        </p>
+                        <button type="button" class="btn btn-outline-success" [hidden]="img.show == true">Više informacija</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 service_2">
+            <div class="images_2">
+                <div class="images_2_img" *ngFor="let img of image_array_2">
+                    <img [src]="img.src" [hidden]="img.show == true"/>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</div>
+<div class="contact_info_location">
+    <div class="contact_info_location_content">
+        <div class="contact_title" >
+            <div class="contact_title_content" data-aos="fade-right" data-aos-duration="1000"
+            data-aos-easing="ease-in-sine">
+                <h1>
+                    <i class="bi bi-headset"></i> Kontakt
+                </h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p class="contact_info">
+                    <i class="bi bi-envelope"> probamail@gmail.com</i>
+                    <i class="bi bi-telephone"> 00000000000</i>
+                    <i class="bi bi-geo-alt" (click)="changeURL()">Serbia, Kragujevac</i>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+

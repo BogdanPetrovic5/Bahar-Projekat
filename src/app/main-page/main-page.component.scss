@@ -1,0 +1,921 @@
+$bg_color:rgb(238, 238, 238);
+$hover_color:rgb(189, 189, 189);
+$border_color:rgb(206, 206, 206);
+$text_color:rgb(95, 179, 0);
+$text_color_1:rgb(112, 112, 112);
+$linear_1: linear-gradient(270deg, rgba(210,210,210,1) 0%, rgba(164,164,164,1) 100%, rgba(225,250,255,1) 100%);
+$linear_2:rgb(210,210,210);
+$linear_1_1:rgb(123,238,140);
+$linear_1_2:linear-gradient(90deg, rgb(195, 252, 203) 0%, rgba(225,246,198,1) 100%, rgba(154,154,154,1) 100%);
+$linear_1_3:linear-gradient(90deg, rgba(0,189,27,1) 0%, rgba(95,242,97,1) 47%, rgba(98,244,100,0) 100%);
+$linear_1_4:linear-gradient(124deg, rgba(31,228,0,1) 0%, rgba(221,244,4,0.4822303921568627) 100%);
+$box_shadow: 1px 0px 5px 0px rgb(192, 192, 192);
+$box_shadow_verctical:  1px -1px 5px 0px rgb(192, 192, 192);
+$widht_drop_down: 160px;
+$phone_drop_down: rgb(46, 46, 46);
+$overlay: linear-gradient(13deg, rgba(27,154,4,1) 0%, rgba(224,253,45,1) 100%);
+$overlay2:linear-gradient(13deg, rgba(27,154,4,0.17970938375350143) 0%, rgba(224,253,45,1) 100%);
+$font_family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font_1: Verdana, Geneva, Tahoma, sans-serif;
+@import 'aos/dist/aos.css';
+img{
+    width: 80px;
+    height: 80px;
+}
+.logo{
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+    width: 100px;
+    height: 400px;
+}
+.bi-geo-alt:hover{
+    cursor: pointer;
+}
+.overview{
+    background-image: url(/assets/images/CoverPage_4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    
+}
+.overview::after{
+    content: "";
+    position: absolute;
+     background: $phone_drop_down;
+    opacity: 0.4;
+    
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+//////////proba
+.overview_info{
+    width: 50% !important;
+    margin: 0 auto;
+}
+.overview_info_content{
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+    width: 100% !important;
+    margin: 0 auto;
+}
+//bahar
+.overview_info_content_title{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: table;
+}
+.overview_info_content_title div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.overview_info_content_title div div{
+    width: 100% !important;
+    
+    display: flex;
+    justify-content: center;
+    
+
+}
+.overview_info_content_title img{
+    width: 375px !important;
+    height: 75px !important;
+    margin: 0 auto;
+    
+    z-index: 1;
+}
+.overview_info_content_hr{
+    background-color: black;
+    color: $text_color;
+    width: 100%;
+    
+}
+.overview_info_content_info{
+    height: 50%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+// .arrow:hover + .title{
+//     display: flex !important;
+//     justify-content: center;
+//     flex-direction: row;
+//     position: absolute;
+//     z-index: 1;
+//     width: 100%;
+//     bottom: 10px;
+//    text-align: center;
+    
+// }
+// .title{
+//     display: none !important;
+// }
+// .title span{
+//     color: black;
+//     font-weight: 800;
+//     font-size: 25px;
+//     font-family: $font_family;
+// }
+// .title h1{
+//     color: white;
+//     font-family: $font_1;
+// }
+.overview_info_content_info_title{
+    z-index: 1;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.overview_info_content_info_title p{
+    text-align: justify;
+    color: white !important;
+    font-weight: 500;
+    font-size: 20px;
+    z-index: 1;
+    opacity: 0.8;
+}
+.overview_info_content_info_title p:hover{
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.overview_info_content_info_title p span{
+    color: black !important;
+    font-weight: 700 !important;
+}
+.bi-chevron-compact-down{
+    font-size: 200px;
+    
+    z-index: 1;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.bi-chevron-compact-down:hover{
+    transform: translateY(-100px);
+    transition: 0.5s;
+}
+/////
+.overview_title{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: $overlay;
+    position: relative;
+}
+.overview_service{
+    
+    background-image: url(/assets/images/snow-cover2.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.general_info_1_h1 img{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 250px !important;
+    height: 50px !important;
+    display: none;
+    // text-transform: uppercase;
+    // font-size: 60px;
+    // font-family:Georgia, 'Times New Roman', Times, serif;
+    // color: white ;
+}
+.general_info_1_h1 p, .general_info_2 p{
+    margin-left: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+.general_info_2{
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.general_info_2 h1{
+    margin-left: 20px;
+    color: white;
+    
+}
+
+.btn-outline-warning{
+    margin-left:20px ;
+    
+    
+}
+.main_page{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    color: $text_color
+}
+.main_page_content{
+    width: 100%;
+    margin: 0 auto;
+}
+.products_title{
+    margin-top: 10px;
+}
+.products_title h1{
+    font-size: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.products_title p{
+    font-size: 13px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: $text_color_1 !important;
+}
+//Products 1
+.products_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+//Products 2
+.products_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+//Condensing units
+.condensing_unit, .evaporators, .panels, .frigo_doors{
+    box-shadow: $box_shadow;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: white;
+    width: 45%;
+    position: relative;
+    cursor: pointer;
+}
+.condensing_unit:hover, .evaporators:hover, .panels:hover, .frigo_doors:hover{
+    transform: scale(1.1);
+    transition: 0.5s !important;
+}
+.condensing_unit h1, .evaporators h1, .panels h1, .frigo_doors h1{
+    font-size: 23px;
+    margin-left: 10px;
+    align-self: center;
+}
+.condensing_unit img, .evaporators img, .panels img, .frigo_doors img{
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.panels img{
+    height: 90px !important;
+    width: 90px !important;
+}
+
+///Hover animation
+
+/// 
+.slide_show{
+    width: 100%;
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: $box_shadow_verctical;
+    
+}
+.slide_show_content{
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+.slide_show_content::before{
+    background-color: $phone_drop_down;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    z-index: 0;
+   
+}
+
+.slide_show_content_img{
+    width: 100%;
+    height: 100%;
+    
+}
+.slide_show_content_img img{
+    width: 100%;
+    height: 100%;
+  
+   
+}
+.slide_show_content_left, .slide_show_content_right{
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    display: table;
+    z-index: 999999;
+}
+.slide_show_content_left{
+    left: 0;
+    text-align: left;
+    
+    
+}
+.slide_show_content_right{
+    right: 0;
+    text-align: right;
+}
+.slide_show_content_left_arrow, .slide_show_content_right_arrow{
+    display: table-cell;
+    vertical-align: middle;
+}
+.slide_show_content_left_arrow i, .slide_show_content_right_arrow i{
+    font-size: 60px;
+    color: white;
+    
+}
+.slide_show_content_left_arrow i:hover, .slide_show_content_right_arrow i:hover{
+    cursor: pointer;
+}
+.slide_show_content_title{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+.slide_show_content_title_content{
+    height: 100%;
+}
+.slide_show_content_title div button{
+    align-self: center;
+    width: 50%;
+    z-index: 99999;
+}
+.slide_show_content_title div h1{
+    font-size: 40px;
+    text-align: center;
+    font-family: $font_family;
+    color: $text_color;
+    font-weight: 400;
+    
+}
+.slide_show_content_title div p{
+    font-size: 15px;
+    text-align: center;
+    font-family: $font_family;
+    font-weight: 200;
+}
+.slide_show_content_title_content div{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.slide_show_content_title_content div button{
+    border-radius: 0px;
+    border-color: white !important;
+    color: white;
+}
+.slide_show_content_title_content div button:hover{
+    background-color: white;
+    color: black;
+}
+.slider_container{
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    bottom: 5%;
+}
+.slider_container_content{
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+.slide{
+    width: calc(100% / 4);
+    height: 5px !important;
+    margin-left: 15px;
+    
+}
+.slide:first-child{
+    margin-left: 0px !important;
+}
+.slide_conent{
+    width: 100%;
+    height: 100%;
+    
+}
+.fill{
+    background-color: $text_color !important;
+    animation: fade-in 1s ease;
+}
+.noFill{
+    background-color: gray !important;
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+///
+/////
+.contact_info_location{
+    width: 100%;
+    height: 250px;
+    background: $bg_color;
+}
+.contact_info_location_content{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contact_title{
+    height: 100%;
+    display: table;
+}
+.contact_title_content{
+    height: 50%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.contact_title h1{
+    font-size: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: $text_color;
+}
+.contact_title p{
+    font-size: 13px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: black !important;
+}
+.contact_info{
+    display: flex;
+    flex-direction: column;
+}
+map{
+    height: 500px;
+    width: 500px;
+}
+@media only screen and (max-width:301px){
+    img{
+        height: 40px;
+        width: 40px;
+    }
+    .panels img{
+        height: 45px !important;
+        width: 45px !important;
+    }
+    .logo{
+        display: none;
+    }
+    .main_page_content{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main_page, .overview{
+        width: 100%
+    }
+    //Products 1
+    .products_1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    //Products 2
+    .products_2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    //Condensing units and rest of products
+    .condensing_unit, .evaporators, .panels, .frigo_doors{
+        box-shadow: $box_shadow;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 15px;
+        border-radius: 5px;
+        width: 100%;
+        
+        
+    }
+    .condensing_unit h1, .evaporators h1, .panels h1, .frigo_doors h1{
+        font-size: 15px;
+    }
+    
+    .products_title h1{
+        font-size: 30px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .contact_title h1{
+        font-size: 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: $text_color;
+    }
+    .images{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .slide_show_content{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 0;
+    }
+    .slide_show_content_title{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .slide_show_content_title_content div h1{
+        font-size: 15px;
+    }
+    .slide_show_content_title_content div p{
+        font-size: 10px !important;
+    }
+    .slide_show_content_title_content div button{
+        font-size: 10px;
+        width: 100%;
+    }
+    // .overview_info_content_title div div img{
+    //     display: none;
+    //     margin: 0 auto;
+    // }
+    // .overview_info_content_title{
+    //     display: none;
+    // }
+    .overview_info{
+        width: 100% !important;
+    }
+    .overview_info_content{
+        height: 100%;
+        width: 100%;
+    }
+    .overview_info_content_title{
+        height: 100%;
+        width: 100% !important;
+    }
+    .overview_info_content_title div div img{
+        width: 187.5px !important;
+        height: 37.5px !important;
+        margin: 0 auto;
+    }
+    .overview_info_content_hr{
+        display: none
+    }
+    .overview_info_content_info{
+       
+        z-index: 1;
+        display: none;
+    }
+    
+}
+@media only screen and (max-width:327px){
+  
+    .overview_info{
+        width: 100% !important;
+    }
+    .overview_info_content{
+        height: 100%;
+        width: 100%;
+    }
+    .overview_info_content_title{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .overview_info_content_title div div img{
+        width: 187.5px !important;
+        height: 37.5px !important;
+        margin: 0 auto;
+    }
+    .overview_info_content_hr{
+        display: none
+    }
+    .overview_info_content_info{
+       
+        z-index: 1;
+        display: none;
+    }
+    
+}
+@media only screen and (max-width:400px){
+    .left, .right{
+        font-size: 30px !important;
+    }
+}
+@media only screen and (min-width:320px) and (max-width:400px){
+    .overview_info_content_title div div img{
+        width: 225px !important;
+        height: 45px !important;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:769px){
+    img{
+        height: 40px;
+        width: 40px;
+    }
+    .panels img{
+        height: 45px !important;
+        width: 45px !important;
+    }
+    .logo{
+        display: none;
+    }
+    .main_page_content{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main_page, .overview{
+        width: 100%
+    }
+    //Products 1
+    .products_1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    //Products 2
+    .products_2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    //Condensing units and rest of products
+    .condensing_unit, .evaporators, .panels, .frigo_doors{
+        box-shadow: $box_shadow;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 15px;
+        border-radius: 5px;
+        width: 100%;
+        
+        
+    }
+    .condensing_unit h1, .evaporators h1, .panels h1, .frigo_doors h1{
+        font-size: 15px;
+    }
+    
+    .products_title h1{
+        font-size: 30px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .overview_info_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .overview_info{
+        width: 100% !important;
+        margin: 0 auto;
+    }
+    .overview_info_content_info_title p{
+        text-align: justify;
+        color: white !important;
+        font-weight: 500;
+        font-size: 17px;
+        z-index: 1;
+    }
+    .overview_info_content_info{
+        height: 40%;
+        z-index: 1;
+    }
+    .overview_info_content_title{
+        height: 20%;
+    }
+    .images{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    // .slide_show_content{
+    //     width: 90%;
+    //     height: 100%;
+    //     margin:0 auto;
+    //     position: relative;
+    // }
+    // .description_1_title_p h1, .description_2_title_p h1{
+    //     color: $text_color;
+    //     font-size: 30px;
+    // }
+    .slide_show_content{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 0;
+    }
+    .slide_show_content_title{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .slide_show_content_title_content div{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .slide_show_content_title_content div h1{
+        font-size: 20px;
+    }
+    .slide_show_content_title_content div p{
+        font-size: 15px !important;
+    }
+    .slide_show_content_title_content div button{
+        font-size: 13px;
+        width: 100%;
+    }
+    .contact_title h1{
+        font-size: 20px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: $text_color;
+    }
+}
+@media only screen and(min-width:770px) and (max-width:1023px){
+    .main_page_content{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main_page, .overview{
+        width: 100%
+    }
+    .products_1 div img{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    //Condensing units
+    .condensing_unit, .evaporators, .panels, .frigo_doors{
+        box-shadow: $box_shadow;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 15px;
+        border-radius: 5px;
+        
+    }
+    .condensing_unit img, .evaporators img, .panels img, .frigo_doors img{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .condensing_unit h1, .evaporators h1, .panels h1, .frigo_doors h1{
+        font-size: 18px;
+        margin-left: 5px;
+        align-self: center;
+    }
+    .products_title h1{
+        font-size: 30px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .overview_info{
+        width: 85% !important;
+        margin: 0 auto;
+    }
+    .images{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .slide_show_content{
+        width: 100%;
+        height: 50%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 0;
+    }
+    // .description_1_title_p h1, .description_2_title_p h1{
+    //     color: $text_color;
+    //     font-size: 30px;
+    // }
+    // .panels img{
+    //     height: 50px !important;
+    //     width: 50px !important;
+    // }
+    // .slide_show_content{
+    //     width: 90%;
+    //     height: 100%;
+    //     margin:0 auto;
+    //     position: relative;
+    // }
+    .contact_info_location_content{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media only screen and(min-width:1024px) and (max-width:1280px){
+    .overview_info{
+        width: 60% !important;
+        margin: 0 auto;
+    }
+    .main_page_content{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main_page{
+        width: 90%;
+    }
+    .condensing_unit h1, .evaporators h1, .panels h1, .frigo_doors h1{
+        font-size: 20px;
+        margin-left: 5px;
+        align-self: center;
+    }
+    .images{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        display: none;
+    }
+    .general_info_1_h1 img{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        width: 250px !important;
+        height: 50px !important;
+        display: block;
+        // text-transform: uppercase;
+        // font-size: 60px;
+        // font-family:Georgia, 'Times New Roman', Times, serif;
+        // color: white ;
+    }
+    .panels img{
+        height: 80px !important;
+        width: 80px !important;
+    }
+    .slide_show_content{
+        width: 90%;
+        height: 100%;
+        margin:0 auto;
+        position: relative;
+    }
+    .contact_info_location_content{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .title h1{
+        color: white;
+        font-family: $font_1;
+        font-size: 25px;
+    }
+}
+@media only screen and(min-width:1281px){
+    
+}

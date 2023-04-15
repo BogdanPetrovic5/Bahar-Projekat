@@ -1,0 +1,350 @@
+<div class="header">
+    <div class="header_content">
+        <div class="header_content_title">
+            <a routerLink="/Paneli"><i class="bi bi-arrow-left-short"></i></a><h1>Krovni</h1>
+        </div>
+        <div class="header_content_content">
+        </div>
+    </div>
+</div>
+<div class="about_product">
+    <div class="about_product_info">
+        <div class="about_product_info_title section_1">
+            <h1>Krovni tip</h1>
+        </div>
+        <div class="about_product_info_spec section_1">
+            <p>
+                <span>Specifikacije:</span> Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. 
+                Obcaecati laborum dolore expedita unde?<br> Possimus quisquam id cum. 
+                Optio nam quisquam hic nihil enim, dignissimos adipisci quidem ipsa. 
+                Aut, iure ab?
+                <br>
+                <Span id="more_info_span"><a href="https://www.technopanel.com/rs/product/i46/TFACE-T-Zidni-sistem.html" target="_blank">Više informacija</a></Span>
+            </p>
+        </div>
+        <div class="about_product_info_supplier section_1">
+            <h1>Proizvođač: Technopanel</h1>
+
+        </div>
+    </div>
+    <div class="about_product_details">
+        <div class="about_product_details_table">
+            <div class="about_product_details_table_heading">
+              <h1 [ngClass]="show_1 ? 'color' : 'color_1'" (click)="show_table_1()">
+                Izolacija Pur
+              </h1>
+              <h1 [ngClass]="show_2 ? 'color' : 'color_1'" (click)="show_table_2()">
+                Izolacija Pir
+              </h1>
+              <h1 [ngClass]="show_3 ? 'color' : 'color_1'" (click)="show_table_3()">
+                Izolacija MW
+              </h1>
+            </div>
+            <div class="table-responsive">
+              <table class="table" [ngClass]="show_1 ? 'showTable' : 'hideTable'">
+                <caption><i class="bi bi-tools"></i>Specifikacije</caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">Debljina panela (mm)</th>
+                  
+                    <td>30</td>
+                    <td>40</td>
+                    <td>50</td>
+                    <td>60</td>
+                    <td>80</td>
+                    <td>100</td>
+                    <td>120</td>
+                    <td>150</td>
+                    <td>160</td>
+                 </tr>
+                  <tr>
+                    <th scope="row">Visina rebra (mm)</th>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    
+                  </tr>
+                  <tr>
+                  <tr>
+                    <th scope="row">Debljina spoljni lim (mm)</th>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row">Debljina unutrašnji lim (mm)</th>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                  
+                  </tr>
+                  <tr>
+                    <th scope="row">Težina panela (kg/m<sup>2</sup>)</th>
+                    <td>8.33</td>
+                    <td>8.69</td>
+                    <td>9.05</td>
+                    <td>9.41</td>
+                    <td>10.13</td>
+                    <td>10.85</td>
+                    <td>11.57</td>
+                    <td>12.65</td>
+                    <td>13.01</td>
+                  
+                  </tr>
+                  <tr>
+                    <th scope="row">Koeficijent toplotne provodljivosti λ(W/mK)</th>
+                    <td colspan="13" class="merged" >0.022</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Koeficijent prolaska toplote U(W/m<sup>2</sup>K)</th>
+                    <td>0.67</td>
+                    <td>0.51</td>
+                    <td>0.41</td>
+                    <td>0.35</td>
+                    <td>0.26</td>
+                    <td>0.21</td>
+                    <td>0.17</td>
+                    <td>0.14</td>
+                    <td>0.13</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Klasa reakcije na vatru:</th>
+                    <td colspan="13" class="merged">Ds3, d0   //   BROOF (t1) *external fire</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Otpornost na vatru (min)</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table" [ngClass]="show_2 ? 'showTable' : 'hideTable'">
+                <caption><i class="bi bi-tools"></i>Specifikacije</caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">Debljina panela (mm)</th>
+                    <td>50</td>
+                    <td>60</td>
+                    <td>80</td>
+                    <td>100</td>
+                    <td>120</td>
+                    <td>150</td>
+                    <td>160</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Visina rebra (mm)</th>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Debljina spoljni lim (mm)</th>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Debljina unutrašnji lim (mm)</th>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                    <td>0.40</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Težina panela (kg/m<sup>2</sup>)</th>
+                    <td>10.29</td>
+                    <td>10.70</td>
+                    <td>11.52</td>
+                    <td>12.34</td>
+                    <td>13.16</td>
+                    <td>14.39</td>
+                    <td>14.80</td>
+                    
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Koeficijent toplotne provodljivosti λ(W/mK)</th>
+                    <td colspan="10" class="merged" >0.022 W/mK</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Koeficijent prolaska toplote U(W/m<sup>2</sup>K)</th>
+                    <td>0.42</td>
+                    <td>0.35</td>
+                    <td>0.27</td>
+                    <td>0.22</td>
+                    <td>0.18</td>
+                    <td>0.15</td>
+                    <td>0.14</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Klasa reakcije na vatru:</th>
+                    <td colspan="10" class="merged">Bs2,d0</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Otpornost na vatru (min)</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>RIE30</td>
+                    <td>RIE30</td>
+                    <td>RIE30</td>
+                    <td>RIE30</td>
+                    <td>RIE30</td>
+                  
+                    
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="table" [ngClass]="show_3 ? 'showTable' : 'hideTable'" >
+                <caption><i class="bi bi-tools"></i>Specifikacije</caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">Debljina panela (mm)</th>
+                    <td>50</td>
+                    <td>60</td>
+                    <td>80</td>
+                    <td>100</td>
+                    <td>120</td>
+                    <td>150</td>
+                    <td>160</td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row">Visina rebra (mm)</th>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                    <td>38</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Debljina spoljni lim (mm)</th>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Debljina unutrašnji lim (mm)</th>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                    <td>0.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gustina izolacionog jezgra (kg/m<sup>3</sup>)</th>
+                    <td colspan="10" class="merged">100kg/m<sup>3</sup></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Težina panela (kg/m<sup>2</sup>)</th>
+                    <td>14.56</td>
+                    <td>15.56</td>
+                    <td>17.56</td>
+                    <td>19.56</td>
+                    <td>21.56</td>
+                    <td>24.56</td>
+                    <td>25.56</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Koeficijent toplotne provodljivosti λ(W/mK)</th>
+                    <td colspan="13" class="merged" >0.039 W/mK</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Koeficijent prolaska toplote U(W/m<sup>2</sup>K)</th>
+                    <td>0.70</td>
+                    <td>0.59</td>
+                    <td>0.45</td>
+                    <td>0.37</td>
+                    <td>0.31</td>
+                    <td>0.25</td>
+                    <td>0.23</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Klasa reakcije na vatru:</th>
+                    <td colspan="13" class="merged">A2-s1, d0</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Otpornost na vatru (min)</th>
+                    <td>-</td>
+                    <td>REI45</td>
+                    <td>REI60</td>
+                    <td>REI120</td>
+                    <td>REI120</td>
+                    <td>REI120</td>
+                    <td>REI120</td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+              
+        </div>
+    </div>
+</div>
+<div class="products_images">
+  <div class="product_images_1 images">
+    <div>
+      <img [ngClass]="show_1 ? 'showImg' : 'hideImg'" src="/assets/images/pirKrovni.jpg" alt="">
+      <img [ngClass]="show_2 ? 'showImg' : 'hideImg'" src="/assets/images/purKrovni.jpg" alt="">
+      <img [ngClass]="show_3 ? 'showImg' : 'hideImg'" src="/assets/images/mwKrovni.jpg" alt="">
+    </div>
+  </div>
+</div>
