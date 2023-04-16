@@ -74,7 +74,7 @@ a:hover{
 #button_for_drop_down{
     position: absolute;
     right: 0;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     opacity: 0;
     z-index: 999999;
@@ -795,7 +795,7 @@ i text{
         height: 100vh;
         
     }
- 
+  
 }
 
 @media  only screen and(min-width:1024px) and (max-width:1279px) {
@@ -1368,5 +1368,7 @@ i text{
     .credits{
         text-align: right;
     }
-    
+    header:hover{
+        cursor: pointer;
+    }
 }
