@@ -571,14 +571,14 @@ map{
         margin: 0 auto;
     }
     .slide_show_content_title_content div h1{
-        font-size: 15px;
+        font-size: 13px;
     }
     .slide_show_content_title_content div p{
-        font-size: 10px !important;
+        font-size: 9px !important;
     }
     .slide_show_content_title_content div button{
         font-size: 10px;
-        width: 100%;
+        width: 100% !important;
     }
     // .overview_info_content_title div div img{
     //     display: none;
@@ -639,11 +639,31 @@ map{
         z-index: 1;
         display: none;
     }
-    
+    .slide_show_content_title_content div h1{
+        font-size: 13px !important;
+    }
+    .slide_show_content_title_content div p{
+        font-size: 9px !important;
+    }
+    .slide_show_content_title_content div button{
+        font-size: 10px;
+        width: 50%;
+    }
 }
 @media only screen and (max-width:400px){
     .left, .right{
         font-size: 30px !important;
+    }
+    .slide_show_content_title_content div h1{
+        font-size: 13px;
+    }
+    .slide_show_content_title_content div p{
+        font-size: 9px !important;
+    }
+    .slide_show_content_title_content div button{
+        font-size: 10px;
+        width: 50%;
+        margin-bottom: 10px;
     }
 }
 @media only screen and (min-width:320px) and (max-width:400px){
@@ -651,6 +671,10 @@ map{
         width: 225px !important;
         height: 45px !important;
         margin: 0 auto;
+    }
+    .slide_show_content_title_content div button{
+        font-size: 10px;
+        width: 60% !important;
     }
 }
 @media only screen and (min-width:300px) and (max-width:769px){
@@ -770,7 +794,7 @@ map{
         font-size: 20px;
     }
     .slide_show_content_title_content div p{
-        font-size: 15px !important;
+        font-size: 15px;
     }
     .slide_show_content_title_content div button{
         font-size: 13px;
@@ -857,6 +881,10 @@ map{
         display: flex;
         justify-content: space-between;
     }
+    .slide_show_content_title_content div button{
+        font-size: 15px;
+        width: 50%;
+    }
 }
 @media only screen and(min-width:1024px) and (max-width:1280px){
     .overview_info{
@@ -907,6 +935,10 @@ map{
         margin:0 auto;
         position: relative;
     }
+    .slide_show_content_title_content div button{
+        font-size: 15px;
+        width: 50%;
+    }
     .contact_info_location_content{
         width: 90%;
         height: 100%;
@@ -921,5 +953,8 @@ map{
     }
 }
 @media only screen and(min-width:1281px){
-    
+    .slide_show_content_title_content div button{
+        font-size: 15px;
+        width: 50% !important;
+    }
 }
