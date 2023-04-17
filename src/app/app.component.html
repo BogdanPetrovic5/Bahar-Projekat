@@ -49,13 +49,13 @@
                         </div>
                         <div class="phone_menu_drop_down_list">
                             <li>
-                                <span>Početna strana</span>
+                                <span><a routerLink="/Početna strana" (click)="changeRoute()">Početna strana</a></span>
                             </li>
                             <li>
                                 <span><a routerLink="/Proizvodi" (click)="changeRoute()">Proizvodi</a></span>
                             </li>
                             <li>
-                                <span routerLink="/Kontakt" >Kontakt</span>
+                                <span routerLink="/Kontakt" (click)="changeRoute()" >Kontakt</span>
                             </li>
                         </div>
                     </div>
