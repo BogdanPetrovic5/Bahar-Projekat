@@ -141,17 +141,37 @@ a i{
 }
 .map-wrap {
     position: relative;
-    width: 400px;
-    height: 400px; /* calculate height of the screen minus the heading */
+    width: 500px;
+    height: 500px; /* calculate height of the screen minus the heading */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     margin-bottom: 40px !important;
     margin-top: 40px !important;
+    box-shadow: $box_shadow;
+}
+.map_wrap_p{
+    margin-top: 5px;
 }
 .map_wrap_p p{
+    color: $text_color_1;
     font-style: italic;
     font-family: $font_family;
+    text-align: center;
+}
+.map_wrap_title{
+    margin-top: 5px;
+    font-style: italic;
+    font-family: $font_family;
+    font-weight: 400;
+    
+}
+.map_wrap_title h1{
+    color: $text_color_1;
+    text-align: center;
+    font-size: 23px;
 }
 .map {
     

@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy  {
     
     this.map = new Map({
       container: this.mapContainer.nativeElement,
-      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=R47Eq8Hrir6mrLqcAm9x`,
+      style: `https://api.maptiler.com/maps/outdoor-v2/style.json?key=R47Eq8Hrir6mrLqcAm9x`,
       center: [initialState.lng, initialState.lat],
       zoom: initialState.zoom
     });
