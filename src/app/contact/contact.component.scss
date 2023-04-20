@@ -70,16 +70,18 @@ a i{
 }
 .contact{
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 .contact_content{
-    width: 60%;
+    width: 40%;
     margin: 0 auto;
    
     display: flex;
     flex-direction: column;
 }
 .contact_content_title{
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     margin-top:40px !important; 
 }
@@ -117,31 +119,36 @@ a i{
     font-family: $font_1;
     color: $text_color_1;
     font-weight: 300;
+    font-style: italic;
 }
 .text_wrap_title{
     font-weight: 700 !important;
     font-size: 20px !important;
 }
 .form{
-    width: 60%;
+    width: 85%;
     border-radius: 5px;
     box-shadow: $box_shadow;
     height: calc(100% / 3);
     margin: 0 auto;
-    margin-top: 40px !important;
+    
     margin-bottom: 40px !important;
+    margin-left: 40px !important;
     background-color: white;
     display: flex;
     flex-direction: row;
 }
+.location{
+    margin-top: 20px;
+}
 .form:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 500ms;
 }
 .map-wrap {
     position: relative;
-    width: 500px;
+    width: 60%;
     height: 500px; /* calculate height of the screen minus the heading */
     display: flex;
     flex-direction: column;
@@ -149,7 +156,8 @@ a i{
     align-items: center;
     margin: 0 auto;
     margin-bottom: 40px !important;
-    margin-top: 40px !important;
+    margin-top: 50px !important;
+    margin-right: 40px !important;
     box-shadow: $box_shadow;
 }
 .map_wrap_p{
@@ -188,36 +196,46 @@ hr{
     bottom: 10px;
     z-index: 999;
 }
-@media only screen and (min-width:0px) and (max-width:200px){
+
+@media only screen and (min-width:200px) and (max-width:399px){
     .map-wrap {
         position: relative;
-        width: 100px !important;
-        height: 100px !important; /* calculate height of the screen minus the heading */
-        margin-bottom: 40px !important;
-        margin: 0 auto;
-    }
-    
-}
-@media only screen and (min-width:200px) and (max-width:300px){
-    .map-wrap {
-        position: relative;
-        width: 200px !important;
-        height: 200px !important; /* calculate height of the screen minus the heading */
-        margin-bottom: 40px !important;
-        margin: 0 auto;
-    }
-    
-}
-@media only screen and (min-width:300px) and (max-width:400px){
-    .map-wrap {
-        position: relative;
-        width: 300px !important;
+        width: 90% !important;
         height: 300px !important; /* calculate height of the screen minus the heading */
+        
+        margin: 0 auto !important;
         margin-bottom: 40px !important;
-        margin: 0 auto;
+        margin-top: 50px !important;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .form{
+        width: 95%;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
     }
     
 }
+// @media only screen and (min-width:300px) and (max-width:400px){
+//     .map-wrap {
+//         position: relative;
+//         width: 90% !important;
+//         height: 300px !important; /* calculate height of the screen minus the heading */
+        
+//         margin: 0 auto;
+//         margin-bottom: 40px !important;
+//     }
+//     .contact{
+//         display: flex;
+//         flex-direction: column;
+//         margin-bottom: 40px;
+//     }
+    
+// }
 @media only screen and (min-width:0px) and (max-width:400px){
     img{
         width: 70px;
@@ -235,9 +253,7 @@ hr{
     margin-bottom: 40px;
     margin-left: 10px;
     }
-    .form{
-        width: 100%;
-    }
+     
     .text{
         margin-left: 40px;
     }
@@ -260,8 +276,59 @@ hr{
         display: flex;
         flex-direction: column;
     }
+    // .form{
+    //     width: 90%;
+    //     margin-bottom: 40px !important;
+    //     margin-top: 50px !important;
+    //     margin: 0 auto !important;
+    // }
+    // .map-wrap {
+    //     position: relative;
+    //     width: 90% !important;
+    //     height: 500px !important; /* calculate height of the screen minus the heading */
+    //     margin-bottom: 40px !important;
+    //     margin: 0 auto !important;
+    // }
     .form{
-        width: 90%;
+        width: 95%;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+    }
+    .contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .map-wrap{
+        margin: 0 auto !important;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:769px){
+    // .map-wrap {
+    //     position: relative;
+    //     width: 400px !important;
+    //     height: 400px !important; /* calculate height of the screen minus the heading */
+    //     margin-bottom: 40px !important;
+    //     margin: 0 auto;
+    // }
+    .form{
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
+    }
+    .map-wrap {
+        position: relative;
+        width: 90% !important;
+        height: 500px !important; /* calculate height of the screen minus the heading */
+        margin-bottom: 40px !important;
+        margin-top: 20px !important;
+        margin: 0 auto;
+    }
+    .contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media only screen and(min-width:770px) and (max-width:1023px){
@@ -274,6 +341,23 @@ hr{
     }
     .form{
         width: 90%;
+        
+        margin: 0 auto !important;
+        margin-bottom: 40px !important;
+        margin-top: 50px !important;
+    }
+    .map-wrap {
+        position: relative;
+        width: 90% !important;
+        height: 500px !important; /* calculate height of the screen minus the heading */
+        margin-bottom: 40px !important;
+        margin-top: 20px !important;
+        margin: 0 auto;
+    }
+    .contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media only screen and(min-width:1024px) and (max-width:1280px){
@@ -286,6 +370,27 @@ hr{
     }
     .form{
         width: 80%;
+        margin: 0 auto !important;
+        margin-bottom: 20px !important;
+        margin-top: 20px !important;
     }
-    
+    .contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .map-wrap {
+        position: relative;
+        width: 80%;
+        height: 500px; /* calculate height of the screen minus the heading */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto !important;
+        margin-bottom: 40px !important;
+        margin-top: 50px !important;
+       
+        box-shadow: $box_shadow;
+    }
 }

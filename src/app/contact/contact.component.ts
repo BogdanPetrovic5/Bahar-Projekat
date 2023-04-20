@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy  {
     this.map?.remove();
   }
   ngAfterViewInit(): void {
-    const initialState = { lng: 20.94800577200743, lat: 44.02857979463333, zoom: 10 };
+    const initialState = { lng: 20.94800577200743, lat: 44.02857979463333, zoom: 12 };
     
     this.map = new Map({
       container: this.mapContainer.nativeElement,
