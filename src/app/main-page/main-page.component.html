@@ -1,55 +1,61 @@
 
 <div class="main_page_content">
-    <div class="row overview">
-        <!-- <div class="col-md-7 overview_title">
-            <img src="/assets/images/Overlay1.png" alt="" class="logo">
-            <div class="general_info_1_h1">
-                <img src="/assets/images/Baharbelo1.png" alt="">
-                <p>
+    <div class="row overview" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-duration="900"
+        data-aos-offset="0">
+       
+                <!-- <div class="overview_info">
                     
-                </p>
-            </div>
-            <div class="general_info_2">
-                <div class="general_info_2_h1">
-                    <h1>
-                        Naslov
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, <br> adipisicing elit. 
-                    </p>
-                    <button type="button" class="btn btn-outline-warning">Više informacija</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-5 overview_service">
-    
-        </div> -->
-        <!-- <div class="col-md-3"></div> -->
-        <div class="overview_info">
-            <div class="overview_info_content">
-                <div class="overview_info_content_title" >
-                    <div>
-                        
-                        <div>
-                            <img src="/assets/images/Baharbelo1.png" alt="">
+                    <div class="overview_info_content">
+                        <div class="overview_info_content_title" >
+                            <img class="animate__animated animate__zoomInDown" src="/assets/images/BaharLogoOverviewMainPage.png" alt="">
                         </div>
                         
+                        <div class="overview_info_content_info">
+                            <div class="overview_info_content_info_title" >
+                                <button type="button" class="btn btn-outline-success" (click)="navigateTo()" id="slideFirst" data-aos="fade-up"
+                                data-aos-duration="2000">&nbsp;</button>
+                                <button type="button" class="btn btn-outline-success" id="slideSecond" data-aos="fade-up"
+                                data-aos-duration="2000">&nbsp;</button>
+                                <button type="button" class="btn btn-outline-success" id="slideThird" data-aos="fade-up"
+                                data-aos-duration="2000">&nbsp;</button>
+                                
+                            </div>
+                            
+                        </div>
                     </div>
-                    
-                </div>
-                <hr class="overview_info_content_hr">
-                <div class="overview_info_content_info">
-                    <div class="overview_info_content_info_title" data-aos="fade-down"
-                        data-aos-duration="2000">
-                            <p> <span>lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Enim nostrum laudantium,  officiis corporis ad fugit voluptatum veniam iure earum, voluptas qui blanditiis ullam nihil omnis necessitatibus. Molestias possimus velit sit.</p>
+                </div> -->
+
+               <!-- <div class="snow"></div> -->
+              
+                <div class="overviewDivLogoContent">
+                    <div class="overviewDivLogoImg">
+                        <img src="/assets/images/baharLogoBanner1.png" alt="">
+                        <h2>Rashladni sistemi</h2>
                     </div>
-                    
+                    <div class="overviewContentButtons">
+                        <button type="button" class="btn btn-outline-success" (click)="navigateTo()" id="slideFirst" data-aos="fade-up"
+                                data-aos-duration="1000">&nbsp;</button>
+                                <button type="button" class="btn btn-outline-success" id="slideSecond" data-aos="fade-up"
+                                data-aos-duration="1000" routerLink="/Kontakt">&nbsp;</button>
+                                <button type="button" class="btn btn-outline-success" id="slideThird" data-aos="fade-up"
+                                data-aos-duration="1000">&nbsp;</button>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <!-- <div class="overviewContent">
+                    <div class="overviewContentButtons">
+                        <button type="button" class="btn btn-outline-success" (click)="navigateTo()" id="slideFirst" data-aos="fade-up"
+                                data-aos-duration="1000">&nbsp;</button>
+                                <button type="button" class="btn btn-outline-success" id="slideSecond" data-aos="fade-up"
+                                data-aos-duration="1000">&nbsp;</button>
+                                <button type="button" class="btn btn-outline-success" id="slideThird" data-aos="fade-up"
+                                data-aos-duration="1000">&nbsp;</button>
+                    </div>
+                </div> -->
         <!-- <div class="col-md-3"></div> -->
     </div>
-    <div class="row main_page">
+    <div class="row main_page" id="allProducts">
     
         <div class="col-sm-12 col-md-3">
             <div class="products_title" data-aos="fade-up"
@@ -58,34 +64,39 @@
                     Proizvodi
                 </h1>
                 <p>Lorem ipsum dolor sit amet consectetur, <br> elit. Perferendis nulla, voluptatem porro molestias dolores atque sequi!</p>
-                <button type="button" class="btn btn-outline-success" routerLink="/Proizvodi">Više informacija</button>
+                <button type="button" class="btn btn-outline-success" id="moreInfoProductsFirst" routerLink="/Proizvodi">Više informacija</button>
             </div>
             
         </div>
-        <div class="col-sm-12 col-md-9">
-                <div class="row" data-aos="fade-right"  data-aos-duration="2000">
-                    <div class="col-md-12 products_1" >
-                        <div class="condensing_unit" routerLink="/Kondenzacione jedinice" >
+        <div class="col-sm-12 col-md-9" >
+                <div class="row">
+                    <div class="col-md-12 products_1"  data-aos="fade-down"
+                    data-aos-duration="1500"
+                    data-aos-offset="0">
+                        <div class="condensing_unit eachProduct" routerLink="/Kondenzacione jedinice">
                             <img src="/assets/images/CUIcon2.png" alt="">
                             <h1>
                                 Kondenzacione jedinice
                             </h1>
                         </div>
-                        <div class="evaporators" routerLink="/Isparivači">
+    
+                        <div class="evaporators eachProduct" routerLink="/Isparivači">
                             <img src="/assets/images/EVIcon2.png" alt="">
                             <h1>
                                 Isparivači
                             </h1>
                         </div>
                     </div>
-                    <div class="col-md-12 products_2">
-                        <div class="panels" routerLink="/Paneli" >
+                    <div class="col-md-12 products_2"  data-aos="fade-up"
+                    data-aos-duration="1500"
+                    data-aos-offset="0">
+                        <div class="panels eachProduct" routerLink="/Paneli" >
                             <img src="/assets/images/PIcon1.png" alt="">
                             <h1>
                                 Paneli
                             </h1>
                         </div>
-                        <div class="frigo_doors" routerLink="/Hladionička vrata" >
+                        <div class="frigo_doors eachProduct" routerLink="/Hladionička vrata">
                             <img src="/assets/images/DIcon1.png" alt="">
                             <h1>
                                 Vrata
@@ -98,7 +109,99 @@
     </div>
 </div>
 <div class="slide_show">
-    <div class="slide_show_content">
+    <div class="slideShowContent">
+        <div class="slideShowTitle">
+            <h1 data-aos="flip-up" data-aos-duration="2000">PARTNERI
+            </h1>
+        </div>
+        <div class="slideShowContentCards">
+            <div class="firstTwo">
+                <div class="firstCardCondensingUnits firstCard cardCl" data-aos="fade-down" data-aos-duration="1500">
+                    <div class="card">
+                        <div class="card-img"><h1>IBS</h1></div>
+                        <img src="/assets/images/IBSLOGO1.png" alt="">
+                          <div class="card-info">
+                            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
+                            <p class="text-title" >IBS Kondenzacione jedinice i isparivači</p>
+                          </div>
+                          <button class="cssbuttons-io-button" (click)="changeURL_2('https://ibs.com.tr')"> Više informacija
+                            <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                            </div>
+                          </button>
+                        </div>
+                </div>
+
+                <div class="secondCardPanels secondCard cardCl" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="card">
+                        <div class="card-img"><h1>Techno<br>&nbsp;&nbsp;panel</h1></div>
+                            <img src="/assets/images/TECHNOPANELLOGO.png" alt="">
+                          <div class="card-info">
+                            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
+                            <p class="text-title">TechnoPanel</p>
+                          </div>
+                          <button class="cssbuttons-io-button" (click)="changeURL_2('https://www.technopanel.com/')"> Više informacija
+                            <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                            </div>
+                          </button>
+                        </div>
+                        
+                </div>
+                <!-- <div class="secondCardEvaporators secondCard cardCl" data-aos="fade-down" data-aos-duration="1500">
+                    <div class="card">
+                        
+                        <div class="card-img"><h1>IBS</h1></div>
+                        <img src="/assets/images/IBSLOGO1.png" alt="">
+                          <div class="card-info">
+                            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
+                            <p class="text-title" >IBS Isparivači</p>
+                          </div>
+                          <button class="cssbuttons-io-button"(click)="changeURL_2('https://ibs.com.tr')"> Više informacija
+                            <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                            </div>
+                          </button>
+                        </div>
+                       
+                </div> -->
+            </div>
+            <div class="lastTwo">
+                <!-- <div class="thirdCardPanels thirdCard cardCl" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="card">
+                        <div class="card-img"><h1>Techno<br>&nbsp;&nbsp;panel</h1></div>
+                            <img src="/assets/images/TECHNOPANELLOGO.png" alt="">
+                          <div class="card-info">
+                            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
+                            <p class="text-title">TechnoPanel</p>
+                          </div>
+                          <button class="cssbuttons-io-button" (click)="changeURL_2('https://www.technopanel.com/')"> Više informacija
+                            <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                            </div>
+                          </button>
+                        </div>
+                        
+                </div> -->
+                <!-- <div class="fourthCardDoors fourthCard cardCl" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="card">
+                        <div class="card-img"><h1>Termiko</h1></div>
+                          <div class="card-info">
+                            <p class="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
+                            <p class="text-title">Termiko Hladionička vrata</p>
+                          </div>
+                          <button class="cssbuttons-io-button" routerLink="/Hladionička vrata"> Više informacija
+                            <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                            </div>
+                          </button>
+                        </div>
+                </div> -->
+            </div>
+            
+        </div>
+    </div>
+    <!-- <div class="slide_show_content">
         <div>
             <div class="slide_show_content_left">
                 <div class="slide_show_content_left_arrow " (click)="left()">
@@ -122,66 +225,35 @@
                 </div>
             </div>
             <div class="slide_show_content_img" *ngFor="let img of image_array" >
-                <img [src]="img.src" alt="" [hidden]="img.show == false"/>
+                <img class="animate__animated animate__slideInLeft slideShowImg" [src]="img.src" alt="" [hidden]="img.show == false"/>
             </div>  
             <div class="slider_container">
                 <div class="slider_container_content">
                     <div class="slide" *ngFor="let slide of image_array" >
-                        <div [ngClass]="slide.show ? 'fill' : 'noFill'" class="slide_conent" >
+                        <div  [ngClass]="slide.show ? 'fill ' : 'noFill'" class="slide_conent" >
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <div class="row slide_show_content">
-        <div class="col-12 col-sm-12 col-md-6 service_1">
-            <div class="images_1">
-                <div class="images_1_img" *ngFor="let img of image_array_1">
-                    <img [src]="img.src" [hidden]="img.show == true"/>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 service_1_description">
-            <div class="description_1">
-                <div class="description_1_title_p" *ngFor="let img of image_array_1" >
-                    <div>
-                        <h1 [hidden]="img.show == true">
-                            {{img.title}}
-                        </h1>
-                        <p [hidden]="img.show == true">
-                            {{img.p}}
-                        </p>
-                        <button type="button" class="btn btn-outline-success" [hidden]="img.show == true" routerLink="">Više informacija</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 service_2_description">
-            <div class="description_2">
-                <div class="description_2_title_p" *ngFor="let img of image_array_2">
-                    <div>
-                        <h1 [hidden]="img.show == true">
-                            {{img.title}}
-                        </h1>
-                        <p [hidden]="img.show == true">
-                            {{img.p}}
-                        </p>
-                        <button type="button" class="btn btn-outline-success" [hidden]="img.show == true">Više informacija</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 service_2">
-            <div class="images_2">
-                <div class="images_2_img" *ngFor="let img of image_array_2">
-                    <img [src]="img.src" [hidden]="img.show == true"/>
-                </div>
-            </div>
-        </div>
     </div> -->
-
+    <!-- <article class="article-wrapper">
+        <div class="rounded-lg container-project">
+          </div>
+          <div class="project-info">
+            <div class="flex-pr">
+              <div class="project-title text-nowrap">Project</div>
+                <div class="project-hover">
+                  <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" color="black" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"><line y2="12" x2="19" y1="12" x1="5"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </div>
+                </div>
+                <div class="types">
+                  <span style="background-color: rgba(165, 96, 247, 0.43); color: rgb(85, 27, 177);" class="project-type">• Analytics</span>
+                   <span class="project-type">• Dashboards</span>
+              </div>
+          </div>
+      </article> -->
 </div>
 <div class="contact_info_location">
     <div class="contact_info_location_content">

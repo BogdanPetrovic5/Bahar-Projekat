@@ -3,6 +3,44 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import '~maplibre-gl/dist/maplibre-gl.css';
+@font-face{
+    // src: url(assets/fonts/Poppins-Black.ttf);
+    // src: url(assets/fonts/Poppins-BlackItalic.ttf);
+    // src: url(assets/fonts/Poppins-Bold.ttf);
+    // src: url(assets/fonts/Poppins-ExtraBold.ttf);
+    // src: url(assets/fonts/Poppins-BoldItalic.ttf);
+    // src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+    // src: url(assets/fonts/Poppins-ExtraLight.ttf);
+    // src: url(assets/fonts/Poppins-ExtraLightItalic.ttf);
+    // src: url(assets/fonts/Poppins-Italic.ttf);
+    // src: url(assets/fonts/Poppins-Light.ttf);
+    // src: url(assets/fonts/Poppins-LightItalic.ttf);
+    // src: url(assets/fonts/Poppins-Medium.ttf);
+    src: url(assets/fonts/Poppins-Regular.ttf);
+    // src: url(assets/fonts/Poppins-SemiBold.ttf);
+    // src: url(assets/fonts/Poppins-SemiBoldItalic.ttf);
+    // src: url(assets/fonts/Poppins-Thin.ttf);
+    // src: url(assets/fonts/Poppins-ThinItalic.ttf);
+    font-family: poppins;
+}
 body{
+    padding: 0;
     background-color: rgb(248, 247, 247);
+    // background: url(/assets/images/productsPageBackground.png);
+    // background-repeat: no-repeat;
+    // background-size:cover;
+    // background-position: center;
+    
+}
+h1{
+    cursor: pointer;
+}
+button{
+    border-radius: 25px !important;
+}
+.product{
+    border-radius: 25px !important;
+    img{
+        border-radius: 25px !important;
+    }
 }

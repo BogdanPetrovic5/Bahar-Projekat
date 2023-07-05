@@ -2,6 +2,7 @@ $bg_color:rgb(238, 238, 238);
 $hover_color:rgb(189, 189, 189);
 $border_color:rgb(206, 206, 206);
 $text_color:rgb(95, 179, 0);
+$text_color3:rgba(95, 179, 0, 0.603);
 $text_color_1:rgb(112, 112, 112);
 $linear_1: linear-gradient(270deg, rgba(210,210,210,1) 0%, rgba(164,164,164,1) 100%, rgba(225,250,255,1) 100%);
 $linear_2:rgb(210,210,210);
@@ -16,15 +17,20 @@ $phone_drop_down: rgb(46, 46, 46);
 $overlay: linear-gradient(13deg, rgba(27,154,4,1) 0%, rgba(224,253,45,1) 100%);
 $overlay2:linear-gradient(13deg, rgba(27,154,4,0.17970938375350143) 0%, rgba(224,253,45,1) 100%);
 $font_family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+button{
+    border-radius: 25px !important;
+}
+
 img{
     width: 100%;
     height: 100%;
     border-radius: 25px;
+   
 }
 a{
     text-decoration: none !important;
     text-transform: none !important;
-    color: $text_color;
+    color: $text_color_1;
 }
 .header{
     width: 100%;
@@ -35,11 +41,11 @@ a{
 .header::before{
     content: "";
     position: absolute;
-    background: url(/assets/images/Overlay3.jpg);
+    background: url(/assets/images/proizvodiBaner1.png);
     width: 100%;
     height: 100%;
     background-position: center;
-    opacity: 0.3;
+   
     z-index: -1;
 }
 .header_content{
@@ -57,6 +63,7 @@ a{
     vertical-align: middle;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
     font-size: 25px;
+    cursor: pointer;
 }
 .header_content_title a{
     display: table-cell;
@@ -66,6 +73,10 @@ a{
 .header_content_title a i{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
     font-size: 30px;
+}
+.background{
+    width: 100%;
+   
 }
 .products_content{
     width: 70%;
@@ -84,8 +95,16 @@ a i {
     border: 0.5px solid green;
     border-radius: 25px;
     box-shadow: $box_shadow;
-    background-color: white !important;
     
+    background-image: url(/assets/images/productsTab1.png);
+    background-position: bottom -40px right 50%;;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // button{
+    //     color: white !important;
+    //     outline: white !important; 
+    //     border: white !important;
+    // }
 }
 //posebno svaki proizvod
 .product_content{
@@ -111,6 +130,9 @@ a i {
     height: 100%;
 }
 .product_content_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 65%;
     margin: 0 auto;
@@ -136,15 +158,26 @@ a i {
     display: flex;
     flex-direction: row;
 }
+.product_content_description_bttn button{
+    // border: 1px $text_color solid !important;
+    color: $text_color_1 !important;
+}
 .product_content_description_bttn button:last-child{
     margin-left: 10px;
 }
 //Hover//
 .product:hover{
-    transform: scale(1.1);
+    
     transition: 1s;
     cursor: pointer;
 }
+#doors{
+    position: relative;
+    
+}
+
+
+
 @media only screen and(min-width:240px) and (max-width:420px){
     .header_content{
         width: 100%;
@@ -190,7 +223,8 @@ a i {
         height: 65%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
         margin-bottom: 15px;
         margin-top: 15px;
     }
@@ -208,7 +242,8 @@ a i {
         
         display: flex;
         flex-direction: column;
-        
+        justify-content: center;
+        align-items: center;
         width: 100%;
         
     }
@@ -218,8 +253,53 @@ a i {
     }
     .product_content_description_bttn button{
         margin-bottom: 15px;
-        font-size: 12px;
+        font-size: 15px;
     }
+    .download-button {
+        position: relative;
+        height: 37px;
+        border-width: 0;
+        border-radius: 25px;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 25px;
+        z-index: 1;
+        background-color:#242a35 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+    .btn {
+        width: 170px !important;
+        height: 40px;
+        display: flex;
+        font-size: 13px !important;
+        align-items: center;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        position: relative;
+        background-color: transparent;
+        transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+        opacity: 0.6;
+      }
+      
+      .btn::after {
+        content: '';
+        border-bottom: 3px double rgb(214, 207, 113);
+        width: 0;
+        height: 100%;
+        position: absolute;
+        font-size: 13px;
+        top: 0;
+        left: 5px;
+        visibility: hidden;
+        opacity: 1;
+        transition: .2s linear;
+      }
 }
 @media only screen and(min-width:680px) and (max-width:767px){
     img{
@@ -355,4 +435,185 @@ a i {
         font-weight: 300;
         font-size: 15px !important;
     }
+    
 }
+
+
+
+
+
+
+
+.button {
+    width: 200px;
+    height: 35px;
+    font-size: 15px;
+    text-align: center;
+    border: 0px;
+    color: rgb(151, 151, 151);
+    background-color:white;
+    box-shadow: $box_shadow;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    transition: 1s;
+    background-image: linear-gradient(90deg,
+          #ecffdf 0%,
+          #d0ffb1 50%,
+          #bafc8e 75%,
+          #a8ff6e67 100%);
+    color: black;
+    animation: slide 10s linear infinite;
+  }
+  
+  @keyframes slide {
+    100% {
+      background-position: 50rem;
+    }
+  }
+  
+  
+  .download-button {
+    position: relative;
+    height: 37px;
+    border-width: 0;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    z-index: 1;
+    background-color:#242a35 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .download-button .docs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    width: 100%;
+    min-height: 37px;
+    padding: 0 10px;
+    border-radius: 25px;
+    z-index: 1;
+    background-color: #242a35;
+    
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   
+   .download {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 25px;
+    transform: translateY(0%);
+    background-color: #242a35;
+    
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover .download {
+    transform: translateY(100%);
+    background-color: #01e056;
+   }
+   
+   .download svg polyline,.download svg line {
+    animation: docs 1s infinite;
+   }
+   
+   @keyframes docs {
+    0% {
+     transform: translateY(0%);
+    }
+   
+    50% {
+     transform: translateY(-15%);
+    }
+   
+    100% {
+     transform: translateY(0%);
+    }
+   }
+
+
+
+
+   .btn {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    position: relative;
+    background-color: transparent;
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0.6;
+  }
+  
+  .btn::after {
+    content: '';
+    border-bottom: 3px double rgb(214, 207, 113);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    font-size: 15px;
+    top: 0;
+    left: 5px;
+    visibility: hidden;
+    opacity: 1;
+    transition: .2s linear;
+  }
+  
+  .btn .icon {
+    transform: translateX(0%);
+    transition: .2s linear;
+    animation: attention 1.2s linear infinite;
+  }
+  
+  .btn:hover::after {
+    visibility: visible;
+    opacity: 0.7;
+    width: 100%;
+  }
+  
+  .btn:hover {
+    letter-spacing: 1.5px;
+    opacity: 1;
+  }
+  
+  .btn:hover > .icon {
+    transform: translateX(30%);
+    animation: none;
+  }
+  
+  @keyframes attention {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    50% {
+      transform: translateX(30%);
+    }
+  }
+  

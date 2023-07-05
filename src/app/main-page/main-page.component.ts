@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
+import { AppComponent } from '../app.component';
+
 declare let AOS: any
 import 'aos/dist/aos.css';
 
@@ -9,6 +11,7 @@ import 'aos/dist/aos.css';
 })
 export class MainPageComponent implements OnInit {
   public show = false
+  temp:any
   public image_array_1 = [
     {
       id:1, src:"/assets/images/condensingunit.jpg", show:true, title:"Kondezacione jedinice",p:"Lorem ipsum dolor sit amet consectetur.<br>Lorem ipsum dolor sit amet consectetur"
@@ -41,12 +44,13 @@ export class MainPageComponent implements OnInit {
       id:4, src:"/assets/images/vrata1.jpg",show:false, title:"Vrata",p:"Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur", link:"Hladionička vrata", class:"fill"
     }
   ]
-  constructor() { 
-
+  constructor(@Inject(AppComponent) private parent: AppComponent) { 
+    
   }
   public i = 0
   public j = 0;
   public clear:any
+  
   ngOnInit(): void {
     this.clear = setInterval(() => {
       
@@ -56,7 +60,12 @@ export class MainPageComponent implements OnInit {
        
       
     }, 6000)
-   AOS.init()
+   AOS.init({
+    once:true
+   })
+   setTimeout(() => {
+    this.parent.navbarDisplay = true
+  }, 0);
   }
   right(){
     this.image_array[this.i % this.image_array.length].show = false
@@ -95,5 +104,12 @@ export class MainPageComponent implements OnInit {
   }
   changeURL(){
     window.location.href = "https://www.google.com/maps/place/BAHAR+Rashladni+Sistemi/@44.0283103,20.9471043,17z/data=!4m9!1m2!2m1!1s+Industrijska,+Kragujevac!3m5!1s0x47572731b2fab92d:0xd33371a689814efd!8m2!3d44.028526!4d20.9480916!16s%2Fg%2F11c5xmmhv9"
+  }
+  navigateTo(){
+    this.temp = document.getElementById("allProducts")
+    this.temp.scrollIntoView({behavior: 'smooth'});
+  }
+  changeURL_2(url:any){
+    window.open(url, "_blank");
   }
 }

@@ -8,12 +8,67 @@ $linear_2:rgb(210,210,210);
 $linear_1_1:rgb(123,238,140);
 $linear_1_2:linear-gradient(90deg, rgb(195, 252, 203) 0%, rgba(225,246,198,1) 100%, rgba(154,154,154,1) 100%);;
 $box_shadow: 1px 0px 5px 0px rgb(192, 192, 192);
-$widht_drop_down: 160px;
+$widht_drop_down: 250px;
 $phone_drop_down: rgb(95, 95, 95);
 $box_shadow_verctical:  1px -1px 5px 0px rgb(192, 192, 192);
 $font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 $font_1: Verdana, Geneva, Tahoma, sans-serif;
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+.active {
+    position: absolute;
+    color: #6B6462 !important;
+    .logo_img{
+        width: 100%;
+        height: 80px;
+        background-image: url(/assets/images/headerLogo.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+        
+    }
+    .header_menu{
+        .header_menu_tabs{
+            .header_menu_list{
+                li{
+                    color: #6B6462 !important;
+                    font-family: poppins;
+                    font-weight:500;
+                    
+                    a{
+                        color: #6B6462 !important;
+                        font-family:poppins;
+                        font-weight: 500;
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.notActive{
+    position: relative !important;
+    .header_menu{
+        .header_menu_tabs{
+            .header_menu_list{
+                li{
+                    color: #6B6462 !important;
+                    font-family: poppins;
+                    font-weight: 500;
+                    a{
+                        color: #6B6462 !important;
+                        font-family:poppins;
+                        font-weight: 500;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
 a{
     text-decoration: none !important;
     text-transform: none !important;
@@ -30,12 +85,12 @@ a:hover{
 /// 
 .header_navbar{
     
-    box-shadow: $box_shadow;
+    
     width: 100%;
     height: 80px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: $bg_color;
-  
+    
+   
 }
 .header{
     width: 100%;
@@ -49,10 +104,12 @@ a:hover{
 }
 .phone_header, .header_logo{
     width: 50%;
+    z-index: 2;
 }
 .phone_header{
     display: flex;
     justify-content: right;
+    z-index: 2;
 }
 .phone_header_drop_down{
     width: 100%;
@@ -360,10 +417,15 @@ i text{
         font-weight: 500;
     }
 }
+@media only screen and(min-width:570px) and (max-width:767px){
+    .header_logo{
+        width: 30% !important;
+    }
+}
 @media only screen and(min-width:390px) and (max-width:767px){
     .logo_img{
-        width: 80%;
-        height: 80px;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
         background-image: url(/assets/images/Logo101.png);
         background-position: center;
@@ -371,6 +433,9 @@ i text{
         background-repeat: no-repeat;
        
         
+    }
+    .header_logo{
+        width: 40%;
     }
     .phone_header{
         width: 100%;
@@ -543,7 +608,7 @@ i text{
 //Izmedju 768px i 1023px
 @media only screen and(min-width:768px) and (max-width:1023px){
     .header_navbar{
-        
+        background-color: white;
         box-shadow: $box_shadow;
         width: 100%;
         height: 80px;
@@ -570,8 +635,11 @@ i text{
     .header_menu, .header_info{
         display: none;
     }
-    .phone_header, .header_logo{
+    .phone_header{
         width: 50%;
+    }
+    .header_logo{
+        width: 25%;
     }
     .phone_header{
         display: flex;
@@ -801,7 +869,7 @@ i text{
 @media  only screen and(min-width:1024px) and (max-width:1279px) {
     //Heder navbar
     .header_navbar{
-        
+        background-color: white;
         box-shadow: $box_shadow;
         width: 100%;
         height: 80px;
@@ -812,7 +880,7 @@ i text{
         margin:0 auto;
         display: flex;
         justify-content: space-evenly;
-       
+        
     }
     //Za logo
     .header_logo{
@@ -833,6 +901,9 @@ i text{
         width: 80%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
         
     }
     .header_info{
@@ -863,7 +934,7 @@ i text{
         height: 100%;
         width: calc(100% / 3);
         color: $text_color;
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 500;
         display: flex;
         justify-content: center;
@@ -871,6 +942,7 @@ i text{
         display: table-cell;
         vertical-align:bottom;
         padding-bottom: 5px;
+        
         
     }
     .header_menu li:hover{
@@ -885,25 +957,29 @@ i text{
         position: relative;
         align-self: flex-end;
         display: flex;
-        border-top: 0.5px solid $border_color;
+        
     }
     //Heder tabovi
     .header_menu_tabs{
         display: flex;
         justify-content: right;
         width: 100%;
+        
     }
     ul.header_menu_list{
         height: 100%;
         display: flex;
         justify-content: right;
+        
     }
     ul.header_menu_list li.tab{
         margin-left: 25px;
+        
         width: auto;
         position: relative;
         display: table;
-        
+        font-size: 20px;
+        font-weight: 500;
     }
     
     ul.header_menu_list li span{
@@ -1084,20 +1160,38 @@ i text{
 @media only screen and(min-width:1280px){
     .header_navbar{
         
-        
+        position: absolute;
         width: 100%;
         height: 80px;
-        position: relative;
-        z-index: 2;
+        
+       
     }
-    .header_navbar::before{
-        width: 100%;
-        height: 100%;
-        content: "";
-        box-shadow: $box_shadow;
+   .active {
         position: absolute;
-        z-index: 0;
+        
+        .logo_img{
+            width: 100%;
+            height: 80px;
+            background-image: url(/assets/images/headerLogo.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+            
+        }
     }
+    .notActive{
+        position: relative !important;
+    }
+    // .header_navbar::before{
+    //     width: 100%;
+    //     height: 100%;
+    //     content: "";
+    //     box-shadow: $box_shadow;
+    //     position: absolute;
+    //     z-index: 0;
+        
+    // }
     .header{
         width: 75%;
         height: 100%;
@@ -1109,6 +1203,7 @@ i text{
     .header_logo{
         width: 20%;
         display: table;
+        z-index: 9999;
     }
     .logo_img{
         width: 100%;
@@ -1117,7 +1212,7 @@ i text{
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-       
+        
         
     }
    
@@ -1125,6 +1220,8 @@ i text{
         width: 80%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         z-index: 2;
     }
     .header_info{
@@ -1158,7 +1255,7 @@ i text{
         position: relative;
         align-self: flex-end;
         display: flex;
-        border-top: 0.5px solid $border_color;
+        
     }
     .header_menu_tabs{
         display: flex;
@@ -1169,7 +1266,7 @@ i text{
         height: 100%;
         width: calc(100% / 3);
         color: $text_color;
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 500;
         display: flex;
         justify-content: center;
@@ -1208,10 +1305,13 @@ i text{
         width: $widht_drop_down;
         left: 0;
         position: absolute;
-        top: 100%;
+        top: 60px;
         z-index: 9999999;
         animation: rotateY 300ms ease-in-out forwards;
         transform-origin: top center;
+        flex-direction: column;
+        list-style: none;
+        background-color: white;
     }
     @keyframes rotateY {
         0% {
@@ -1238,15 +1338,15 @@ i text{
     .top_border{
         border-top: 0.5px solid $border_color;
     }
-    #products:hover .products_drop_down{
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        background-color: white;
-        box-shadow: $box_shadow_verctical;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
+    // #products:hover .products_drop_down{
+    //     display: flex;
+    //     flex-direction: column;
+    //     list-style: none;
+    //     background-color: white;
+    //     box-shadow: $box_shadow_verctical;
+    //     border-bottom-left-radius: 5px;
+    //     border-bottom-right-radius: 5px;
+    // }
     .phone_header{
         display: none;
     }
@@ -1254,6 +1354,7 @@ i text{
         width: 100%;
         height: 400px;
         box-shadow: $box_shadow;
+        background-color: whitesmoke;
         overflow: hidden;
     }
     .footer_content{

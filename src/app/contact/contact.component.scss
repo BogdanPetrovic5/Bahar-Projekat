@@ -18,7 +18,7 @@ $overlay2:linear-gradient(13deg, rgba(27,154,4,0.17970938375350143) 0%, rgba(224
 $font_family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 $font_1: Verdana, Geneva, Tahoma, sans-serif;
 img{
-    width: 100px;
+    width: 120px;
     height: 100px;
 }
 .header{
@@ -30,30 +30,31 @@ img{
     background-size:cover;
     background-position: center;
     box-shadow: $box_shadow;
+    
+    z-index: 0 !important;
 }   
-.header::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    z-index: -1;
-}
 .header_content{
     width: 70%;
     height: 100%;
     margin: 0 auto;
+    position: relative;
+    z-index: 0 !important;
 }
 .header_content_title{
     width: 100%;
     height: 100%;
     display: table;
+    position: absolute;
+    
+
 }
 .header_content_title h1{
     display: table-cell;
     vertical-align: middle;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
     font-size: 25px;
+    cursor: pointer;
+    z-index: 2 !important;
 }
 .header_content_title a{
     display: table-cell;
@@ -82,13 +83,14 @@ a i{
 }
 .contact_content_title{
     width: 50%;
-    margin: 0 auto;
+    margin-left: 40px;
     margin-top:40px !important; 
 }
 .contact_content_title h1{
     color: $text_color;
     font-size: 30px;
     font-family: $font_1;
+    text-align: left;
 }
 .form img{
     margin-top: 40px;
@@ -127,7 +129,7 @@ a i{
 }
 .form{
     width: 85%;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: $box_shadow;
     height: calc(100% / 3);
     margin: 0 auto;
@@ -149,7 +151,7 @@ a i{
 .map-wrap {
     position: relative;
     width: 60%;
-    height: 500px; /* calculate height of the screen minus the heading */
+    height: calc(100% * px); /* calculate height of the screen minus the heading */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,6 +161,7 @@ a i{
     margin-top: 50px !important;
     margin-right: 40px !important;
     box-shadow: $box_shadow;
+    border-radius: 25px;
 }
 .map_wrap_p{
     margin-top: 5px;

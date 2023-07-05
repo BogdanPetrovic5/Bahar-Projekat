@@ -2,121 +2,151 @@
 <div class="header">
     <div class="header_content">
         <div class="header_content_title">
-            <a routerLink="/Početna strana"><i class="bi bi-arrow-left-short"></i></a><h1>Proizvodi</h1>
+            <a routerLink="/Početna strana"><i class="bi bi-arrow-left-short"></i></a><h1 routerLink="/Početna strana">Proizvodi</h1>
         </div>
         <div class="header_content_content">
         </div>
     </div>
 </div>
-<div class="products_content">
-    <div class="row overview">
-        <div class="col-12 col-lg-5 condensing_unit product">
-            <div class="condensing_unit_content product_content">
-                <div class="condensing_unit_content_img product_content_img">
-                    <div>
-                        <img src="/assets/images/condensingunit.jpg" alt="" routerLink="/Kondenzacione jedinice">
-                    </div>
-                    
-                </div>
-                <div class="condensing_unit_content_description product_content_description">
-                    <div>
-                        <h1>
-                            Kondenzacione jedinice
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ab, aperiam quis dolor cum enim reiciendis natus doloremque
-                            dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
-                        </p>
-                        <div class="product_content_description_bttn">
-                            <button type="button" class="btn btn-outline-success" routerLink="/Kondenzacione jedinice">Više informacije</button>
-                            <button type="button" class="btn btn-outline-secondary"><a href="https://ibs.com.tr/wp-content/uploads/2020/04/Condensing_Units_Brochure.pdf" target="_blank">Preuzmi katalog </a><i class="bi bi-arrow-down-circle"></i></button>
+<div class="background">
+    <div class="products_content">
+        <div class="row overview">
+            <div class="col-12 col-lg-5 condensing_unit product">
+                <div class="condensing_unit_content product_content">
+                    <div class="condensing_unit_content_img product_content_img">
+                        <div>
+                            <img src="/assets/images/condensingunit.jpg" alt="" routerLink="/Kondenzacione jedinice">
                         </div>
+                        
                     </div>
-                    
-                </div>  
-            </div>
-        </div>
-        <div class="col-12 col-lg-2"></div>
-        <div class="col-12 col-lg-5 evaporators product">
-            <div class="evaporators_content product_content">
-                <div class="evaporators_content_img product_content_img">
-                    <div>
-                        <img src="/assets/images/evaporators.jpg" alt="" routerLink="/Isparivači">
-                    </div>
-                    
-                </div>
-                <div class="evaporators_content_description product_content_description" >
-                    <div>
-                        <h1>
-                            Isparivači
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ab, aperiam quis dolor cum enim reiciendis natus doloremque
-                            dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
-                        </p>
-                        <div class="product_content_description_bttn">
-                            <button type="button" class="btn btn-outline-success" routerLink="/Isparivači"> Više informacije</button>
-                            <button type="button" class="btn btn-outline-secondary"><a href="https://ibs.com.tr/wp-content/uploads/2020/04/General_Product_Catalog.pdf" target="_blank">Preuzmi katalog </a><i class="bi bi-arrow-down-circle"></i></button>
+                    <div class="condensing_unit_content_description product_content_description">
+                        <div>
+                            <h1>
+                                Kondenzacione jedinice
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab, aperiam quis dolor cum enim reiciendis natus doloremque
+                                dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
+                            </p>
+                            <div class="product_content_description_bttn">
+                                <button type="button" class="btn" routerLink="/Kondenzacione jedinice">Više informacija <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px" class="icon">
+                                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" stroke="#292D32" d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"></path>
+                                    </svg></button>
+                                <button class="download-button" (click)="download('https://ibs.com.tr/wp-content/uploads/2020/04/Condensing_Units_Brochure.pdf')">
+                                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline></svg> PDF</div>
+                                    <div class="download">
+                                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line></svg>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                        
+                    </div>  
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-lg-5 panels product">
-            <div class="panels_content product_content">
-                <div class="panels_content_img product_content_img">
-                    <div>
-                        <img src="/assets/images/paneli2.jpg" alt="" routerLink="/Paneli">
+            <div class="col-12 col-lg-2"></div>
+            <div class="col-12 col-lg-5 evaporators product">
+                <div class="evaporators_content product_content">
+                    <div class="evaporators_content_img product_content_img">
+                        <div>
+                            <img src="/assets/images/evaporators.jpg" alt="" routerLink="/Isparivači">
+                        </div>
+                        
                     </div>
-                    
-                </div>
-                <div class="panels_content_description product_content_description">
-                    <div>
-                        <h1>
-                            Paneli
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ab, aperiam quis dolor cum enim reiciendis natus doloremque
-                            dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
-                        </p>
-                        <div class="product_content_description_bttn">
-                            <button type="button" class="btn btn-outline-success">Više informacije</button>
-                            <button type="button" class="btn btn-outline-secondary"><a href="https://www.technopanel.com/rs/catalogs/Katalozi.html" target="_blank">Preuzmi katalog </a><i class="bi bi-arrow-down-circle"></i></button>
+                    <div class="evaporators_content_description product_content_description" >
+                        <div>
+                            <h1>
+                                Isparivači
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab, aperiam quis dolor cum enim reiciendis natus doloremque
+                                dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
+                            </p>
+                            <div class="product_content_description_bttn">
+                                <button type="button" class="btn" routerLink="/Isparivači"> Više informacija <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px" class="icon">
+                                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" stroke="#292D32" d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"></path>
+                                    </svg></button>
+                                <button class="download-button" (click)="download('https://ibs.com.tr/wp-content/uploads/2020/04/General_Product_Catalog.pdf')">
+                                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline></svg> PDF</div>
+                                    <div class="download">
+                                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line></svg>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-lg-2"></div>
-        <div class="col-12 col-lg-5 doors product">
-            <div class="doors_content product_content">
-                <div class="doors_content_img product_content_img">
-                    <div>
-                        <img src="/assets/images/vrata1.jpg" alt="" routerLink="/Hladionička vrata">
+            <div class="col-12 col-lg-5 panels product">
+                <div class="panels_content product_content">
+                    <div class="panels_content_img product_content_img">
+                        <div>
+                            <img src="/assets/images/paneli2.jpg" alt="" routerLink="/Paneli">
+                        </div>
+                        
                     </div>
-                    
-                </div>
-                <div class="doors_content_description product_content_description" routerLink="/Hladionička vrata">
-                    <div>
-                        <h1>
-                            Vrata
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Ab, aperiam quis dolor cum enim reiciendis natus doloremque
-                            dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
-                        </p>
-                        <div class="product_content_description_bttn">
-                            <button type="button" class="btn btn-outline-success" routerLink="/Hladionička vrata">Više informacije</button>
-                            
+                    <div class="panels_content_description product_content_description">
+                        <div>
+                            <h1>
+                                Paneli
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab, aperiam quis dolor cum enim reiciendis natus doloremque
+                                dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
+                            </p>
+                            <div class="product_content_description_bttn">
+                                <button type="button" class="btn" routerLink="/Paneli">Više informacija <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px" class="icon">
+                                    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" stroke="#292D32" d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"></path>
+                                    </svg></button>
+                                <button class="download-button" (click)="download('https://www.technopanel.com/rs/catalogs/Katalozi.html')">
+                                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline></svg> PDF</div>
+                                    <div class="download">
+                                      <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line></svg>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    
+                </div>
+            </div>
+            <div class="col-12 col-lg-2"></div>
+            <div class="col-12 col-lg-5 doors product" id="doors">
+                <div class="doors_content product_content">
+                    <div class="doors_content_img product_content_img">
+                        <div>
+                            <img src="/assets/images/vrata1.jpg" alt="" routerLink="/Hladionička vrata">
+                        </div>
+                        
+                    </div>
+                    <div class="doors_content_description product_content_description" routerLink="/Hladionička vrata">
+                        <div>
+                            <h1>
+                                Vrata
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab, aperiam quis dolor cum enim reiciendis natus doloremque
+                                dolorum qui officiis incidunt quo unde dolore sunt animi atque ullam placeat? Eos?
+                            </p>
+                            <div class="product_content_description_bttn">
+                                <!-- <button type="button" class="btn btn-outline-success" routerLink="/Hladionička vrata">Više informacija</button> -->
+                                <button class="btn" routerLink="/Hladionička vrata">
+                                    Više informacija
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px" class="icon">
+                                  <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" stroke="#292D32" d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008"></path>
+                                  </svg>
+                                  </button>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+

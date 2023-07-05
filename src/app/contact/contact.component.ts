@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
-import { Map,NavigationControl, Marker  } from 'maplibre-gl';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy,Inject } from '@angular/core';
+import { Map,NavigationControl, Marker } from 'maplibre-gl';
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -9,9 +10,12 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy  {
   map: Map | undefined;
   @ViewChild('map')
   private mapContainer!: ElementRef<HTMLElement>;
-  constructor() { }
+  constructor(@Inject(AppComponent) private parent: AppComponent) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.parent.navbarDisplay = false
+    }, 0);
   }
   ngOnDestroy(): void {
     this.map?.remove();

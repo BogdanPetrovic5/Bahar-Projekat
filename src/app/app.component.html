@@ -1,30 +1,30 @@
 
-<div class="header_navbar">
+<div class="header_navbar" id="navbar" [ngClass]="navbarDisplay ? 'active':'notActive'">
     <div class="header">
         <div class="header_logo">
-            <div class="logo_img">
+            <div class="logo_img" [hidden]="navbarDisplay == true">
                   
             </div>
            
         </div>
         <div class="header_tabs">
-            <div class="header_info">
+            <!-- <div class="header_info">
                 <div class="header_info_mail_phone">
                     <i class="bi bi-envelope"> probamail@gmail.com</i>
                     <i class="bi bi-telephone"> 00000000000</i>
                     <i class="bi bi-geo-alt" (click)="changeURL()">Srbija, Kragujevac</i>
                 </div>
-            </div>
+            </div> -->
             <div class="header_menu">
                 <div class="header_menu_tabs">
                     <ul class="header_menu_list">
                         <li class="tab">
-                            <span><a routerLink="/Početna strana">Početna strana </a><i class="bi bi-house"></i></span>
+                            <span><a routerLink="/Početna strana" [routerLink]="'Početna strana'">Početna strana </a></span>
                         </li>
                         <li id="products" class="tab">
-                            <span><a routerLink="/Proizvodi">Proizvodi </a> <i class="bi bi-caret-down-fill"></i></span>
+                            <span (mouseenter)="showProducts()"><a routerLink="/Proizvodi">Proizvodi </a></span>
                             
-                            <div class="products_drop_down">
+                            <div class="products_drop_down" (mouseleave)="closeProducts()" id="productsDropDown">
                                 <li routerLink="/Kondenzacione jedinice"><span>Kondenzacione jedinice</span></li>
                                 <li routerLink="/Isparivači" class="top_border"><span>Isparivači</span></li>
                                 <li routerLink="/Hladionička vrata" class="top_border"><span>Vrata</span></li>
@@ -32,7 +32,7 @@
                             </div>
                         </li>
                         <li class="tab">
-                            <span routerLink="/Kontakt">Kontakt<i class="bi bi-envelope"></i></span>
+                            <span routerLink="/Kontakt">Kontakt</span>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
 <div class="footer">
     <div class="footer_content">
         <div class="site_content footer_content_section">
-            <div class="condensing_unit_list products_list" data-aos="fade-right"  data-aos-duration="1400">
+            <div class="condensing_unit_list products_list" data-aos="fade-right">
                 <header routerLink="/Kondenzacione jedinice">Kondenzacione jedinice</header>
                 <ul>
                     <li>
@@ -87,7 +87,7 @@
                 </ul>
                 
             </div>
-            <div class="evaporators_list products_list" data-aos="fade-right"  data-aos-duration="1900">
+            <div class="evaporators_list products_list">
                 <header routerLink="/Isparivači">Evaporatori</header>
                 <ul>
                     <li>
@@ -104,7 +104,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="panels_list products_list" data-aos="fade-right"  data-aos-duration="2300">
+            <div class="panels_list products_list" >
                 <header routerLink="/Paneli">Paneli</header>
                 <ul>
                     <li>
@@ -121,7 +121,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="doors_list products_list" data-aos="fade-right"  data-aos-duration="2800">
+            <div class="doors_list products_list" >
                 <header routerLink="/Vrata">Vrata</header>
                 <ul>
                     <li>

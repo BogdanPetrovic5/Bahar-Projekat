@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject} from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-condensing-units',
   templateUrl: './condensing-units.component.html',
@@ -7,11 +8,14 @@ import { Router } from '@angular/router';
 })
 export class CondensingUnitsComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(@Inject(AppComponent) private parent: AppComponent, private router: Router) {
 
    }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.parent.navbarDisplay = false
+    }, 0);
   }
   changeRoute(name:any){
     this.router.navigate(["/Kondenzacione jedinice" + name])

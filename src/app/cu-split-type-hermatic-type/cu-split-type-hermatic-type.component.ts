@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit,Inject } from '@angular/core';
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-cu-split-type-hermatic-type',
   templateUrl: './cu-split-type-hermatic-type.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CUSplitTypeHermaticTypeComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(AppComponent) private parent: AppComponent) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.parent.navbarDisplay = false
+    }, 0);
   }
 
 }

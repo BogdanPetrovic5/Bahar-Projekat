@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Inject } from '@angular/core';
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-p-roof',
   templateUrl: './p-roof.component.html',
@@ -9,9 +9,12 @@ export class PRoofComponent implements OnInit {
   public show_1 = true
   public show_2 = false
   public show_3 = false
-  constructor() { }
+  constructor(@Inject(AppComponent) private parent: AppComponent) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.parent.navbarDisplay = false
+    }, 0);
   }
   show_table_1(){
     if(this.show_1 == false){
