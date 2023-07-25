@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { PWallComponent } from './p-wall/p-wall.component';
 import { PRoofComponent } from './p-roof/p-roof.component';
 import { PFacadeComponent } from './p-facade/p-facade.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ContactComponent } from './contact/contact.component';
     PWallComponent,
     PRoofComponent,
     PFacadeComponent,
-    ContactComponent
+    ContactComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,9 @@ import { ContactComponent } from './contact/contact.component';
     NgbModule
     
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

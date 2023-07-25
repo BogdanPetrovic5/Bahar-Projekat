@@ -15,7 +15,7 @@ $widht_drop_down: 160px;
 $phone_drop_down: rgb(46, 46, 46);
 $overlay: linear-gradient(13deg, rgba(27,154,4,1) 0%, rgba(224,253,45,1) 100%);
 $overlay2:linear-gradient(13deg, rgba(27,154,4,0.17970938375350143) 0%, rgba(224,253,45,1) 100%);
-$font_family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font_family:poppins;
 a i {
     color: black;
 }
@@ -40,11 +40,11 @@ thead{
 .header::before{
     content: "";
     position: absolute;
-    background: url(/assets/images/Overlay3.jpg);
+    background: url(/assets/images/proizvodiBaner1.png);
     width: 100%;
     height: 100%;
     background-position: center;
-    opacity: 0.3;
+    
     z-index: -1;
 }
 .header_content{
@@ -60,7 +60,7 @@ thead{
 .header_content_title h1{
     display: table-cell;
     vertical-align: middle;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-family:poppins;
     font-size: 25px;
 }
 .header_content_title a{
@@ -69,7 +69,7 @@ thead{
     width: 15px;
 }
 .header_content_title a i{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-family:poppins;
     font-size: 30px;
 }
 ///product
@@ -121,7 +121,7 @@ thead{
     font-size: 20px;
     color: $text_color_1;
     font-weight: 500;
-    font-family: $font_family;
+    font-family: poppins;
 }
 ////Details
 .about_product_details_table{
@@ -251,5 +251,14 @@ table caption i{
         width: 100%;
         height: 100%;
         margin: 0 auto;
+    }
+}
+.product_images_1{
+    div{
+        border-radius: 25px;
+        overflow: hidden;
+        img{
+            border-radius: 25px !important;
+        }
     }
 }

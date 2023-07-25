@@ -83,9 +83,29 @@
     </div>
     
   </div> -->
-  <div class="products_imagesSlideShow">
-    <div class="products_imagesSlideShowImage">
-
+  
+</div>
+<div class="products_imagesSlideShow">
+  <!-- <div class="products_imagesSlideShowImage" *ngFor="let src of slideShowImage" [hidden] = "src.id == false">
+      <div class="products_imagesSlideShowImageContent">
+          <img src="{{src.src}}" class="animation" id="{{src.num}}" alt="">
+      </div>
+      <div class="navigation">
+        <div class="circle " *ngFor="let src of slideShowImage" (click)="changeImg(src.num)" [ngClass]="src.id ? 'active' : 'notActive'"></div>
+        
+      </div>
+  </div> -->
+  <div class="products_imagesSlideShowImage">
+    <!-- <div class="container">
+      <div id="first" class="card first"><img src="/assets/images/SplitTypeSemiHermatic-slika1.png" alt=""></div>
+      <div id="second" class="card"><img src="/assets/images/SplitTypeSemiHermatic-slika2.png" alt=""></div>
+      <div id="third" class="card"><img src="/assets/images/SplitTypeSemiHermatic-slika3.png" alt=""></div>
+    </div> -->
+    <div class="productsImagesContent">
+      <div id="first" class="slide first"><img src="/assets/images/SplitTypeSemiHermatic-slika1.png" alt=""></div>
+      <div id="second" class="slide"><img src="/assets/images/SplitTypeSemiHermatic-slika2.png" alt=""></div>
+      <div id="third" class="slide"><img src="/assets/images/SplitTypeSemiHermatic-slika3.png" alt=""></div>
     </div>
   </div>
+  
 </div>

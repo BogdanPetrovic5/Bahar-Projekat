@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy,Inject } from '@angular/core';
 import { Map,NavigationControl, Marker } from 'maplibre-gl';
 import { AppComponent } from '../app.component';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

@@ -748,12 +748,12 @@ img{
 }
 .contact_title h1{
     font-size: 40px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:poppins;
     color: $text_color;
 }
 .contact_title p{
     font-size: 13px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:poppins;
     font-weight: 300;
     color: black !important;
 }
@@ -2286,7 +2286,7 @@ map{
     width: 101%;
     height: 101%;
     transform: translate(-50%, -50%);
-    border: 1rem solid white;
+    border: 1rem solid white ;
    }
    
    /*Text*/

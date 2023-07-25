@@ -22,12 +22,14 @@ $linear_1_2:linear-gradient(90deg, rgb(195, 252, 203) 0%, rgba(225,246,198,1) 10
 $linear_1_3:linear-gradient(90deg, rgba(0,189,27,1) 0%, rgba(95,242,97,1) 47%, rgba(98,244,100,0) 100%);
 $linear_1_4:linear-gradient(124deg, rgba(31,228,0,1) 0%, rgba(221,244,4,0.4822303921568627) 100%);
 $box_shadow: 1px 0px 5px 0px rgb(192, 192, 192);
+$circleShadow:0px 5px 5px 0px rgba(192,192,192,1);
 $box_shadow_verctical:  1px -1px 5px 0px rgb(192, 192, 192);
 $widht_drop_down: 160px;
 $phone_drop_down: rgb(46, 46, 46);
 $overlay: linear-gradient(13deg, rgba(27,154,4,1) 0%, rgba(224,253,45,1) 100%);
 $overlay2:linear-gradient(13deg, rgba(27,154,4,0.17970938375350143) 0%, rgba(224,253,45,1) 100%);
 $font_family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 a i {
     color: black;
 }
@@ -47,11 +49,11 @@ img{
 .header::before{
     content: "";
     position: absolute;
-    background: url(/assets/images/Overlay3.jpg);
+    background: url(/assets/images/proizvodiBaner1.png);
     width: 100%;
     height: 100%;
     background-position: center;
-    opacity: 0.3;
+    
     z-index: -1;
 }
 .header_content{
@@ -67,7 +69,7 @@ img{
 .header_content_title h1{
     display: table-cell;
     vertical-align: middle;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-family: poppins;
     font-size: 25px;
 }
 .header_content_title a{
@@ -76,7 +78,7 @@ img{
     width: 15px;
 }
 .header_content_title a i{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-family: poppins;
     font-size: 30px;
 }
 .condensing_units{
@@ -161,4 +163,73 @@ img{
         font-size: 15px !important;
         color: $text_color_1;
     }
+}
+@media only screen and(min-width:1024px){
+    .overview:hover .circle{
+        height: 110px;
+        width: 110px;
+        transition:.3s ease-in-out;
+       
+    }
+    .mainProductDescription p{
+        transition:.3s ease-in-out;
+    }
+    .overview:hover .mainProductDescription p{
+        transform: translateY(50%);
+        transition:.3s ease-in-out;
+    }
+    .overview:hover .mainProductImg img{
+        transform: scale(0.9);
+        
+    }
+    .mainProductImg img{
+        transition:.3s ease-in-out;
+    }
+}
+.overview{
+    border-radius:25px ;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+.overview:hover .circle{
+    --size: 110px;
+    width: var(--size);
+    height: var(--size);
+    
+}
+.mainProductImg{
+    margin: 25px;
+}
+.mainProductDescription{
+    margin: 25px;
+}
+.circle{
+    transition:all .3s ease-in-out;
+    --size: 100px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0 auto;
+    z-index: 1;
+    top: -55px;
+    background-image: url(/assets/images/cardBaner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.circle::before{
+    border-radius: inherit;
+    position: absolute;
+    content: "";
+    top:-1px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 103%;
+    height: 103%;
+    
+    border: 20px solid rgb(248, 247, 247);;
 }

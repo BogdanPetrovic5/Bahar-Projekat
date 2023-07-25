@@ -15,10 +15,10 @@ $widht_drop_down: 160px;
 $phone_drop_down: rgb(46, 46, 46);
 $overlay: linear-gradient(13deg, rgba(27,154,4,1) 0%, rgba(224,253,45,1) 100%);
 $overlay2:linear-gradient(13deg, rgba(27,154,4,0.17970938375350143) 0%, rgba(224,253,45,1) 100%);
-$font_family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-$font_1: Verdana, Geneva, Tahoma, sans-serif;
+$font_family:poppins;
+$font_1:poppins;
 img{
-    width: 120px;
+    width: 110px;
     height: 100px;
 }
 .header{
@@ -51,7 +51,7 @@ img{
 .header_content_title h1{
     display: table-cell;
     vertical-align: middle;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+   
     font-size: 25px;
     cursor: pointer;
     z-index: 2 !important;
@@ -62,7 +62,7 @@ img{
     width: 15px;
 }
 .header_content_title a i{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+   
     font-size: 30px;
 }
 a i{
@@ -121,7 +121,7 @@ a i{
     font-family: $font_1;
     color: $text_color_1;
     font-weight: 300;
-    font-style: italic;
+    
 }
 .text_wrap_title{
     font-weight: 700 !important;
@@ -199,7 +199,10 @@ hr{
     bottom: 10px;
     z-index: 999;
 }
-
+.icon{
+    margin-left: 15px;
+    margin-right: 15px;
+}
 @media only screen and (min-width:200px) and (max-width:399px){
     .map-wrap {
         position: relative;
@@ -239,10 +242,10 @@ hr{
 //     }
     
 // }
-@media only screen and (min-width:0px) and (max-width:400px){
+@media only screen and (min-width:0px) and (max-width:460px){
     img{
-        width: 70px;
-        height: 70px;
+        width: 70px !important;
+        height: 70px !important;
     }
     .contact_content{
         width: 100% !important;
@@ -396,4 +399,8 @@ hr{
        
         box-shadow: $box_shadow;
     }
+}
+a{
+    color: $text_color_1;
+    text-decoration: none;
 }

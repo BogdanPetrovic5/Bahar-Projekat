@@ -18,6 +18,7 @@ import { ProizvodiComponent } from './proizvodi/proizvodi.component';
 import { PRoofComponent } from './p-roof/p-roof.component';
 import { PFacadeComponent } from './p-facade/p-facade.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"Početna strana", pathMatch:"full"},
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path:"Paneli/Zidni", component:PWallComponent},
   {path:"Paneli/Krovni", component:PRoofComponent},
   {path:"Paneli/Fasadni", component:PFacadeComponent},
-  {path:"Kontakt", component:ContactComponent}
+  {path:"Kontakt", component:ContactComponent},
+  {path:"O firmi", component:AboutUsComponent}
 ];
 
 @NgModule({
